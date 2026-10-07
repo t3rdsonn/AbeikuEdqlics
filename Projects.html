@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Portfolio | Abeiku Edqlics Studio</title>
+    <meta name="description" content="Browse the full portfolio of Abeiku Edqlics — a curated gallery of wedding, portrait, corporate, graduation, food, and funeral photography across the DMV and Ghana.">
+    <meta name="keywords" content="portfolio, photography gallery, wedding photos, portrait photography, corporate events Ghana, graduation photos, Edqlics">
+    <meta property="og:title" content="Projects & Portfolio | Abeiku Edqlics Studio">
+    <meta property="og:description" content="A curated gallery of visual stories — weddings, portraits, corporate events and more by Abeiku Edqlics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.edqlics.com/Projects.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects & Portfolio | Abeiku Edqlics Studio">
+    <meta name="twitter:description" content="A curated gallery of visual stories — weddings, portraits, corporate events and more by Abeiku Edqlics.">
+
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+        <link rel="manifest" href="./assets/favicon/site.webmanifest">
+ 
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Satoshi', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#f3f2f0',
+                            dark: '#111111',
+                            red: '#e93314',
+                            muted: '#6b6b6b',
+                            cardBg: '#e6e4e0'
+                        }
+                    },
+                    letterSpacing: {
+                        tighter: '-.04em',
+                        tightest: '-.06em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f3f2f0;
+            color: #111111;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .corner-tick {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .corner-tick::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #a3a3a3;
+        }
+
+        .corner-tick::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background-color: #a3a3a3;
+        }
+
+        .tick-tl {
+            top: -6px;
+            left: -6px;
+        }
+
+        .tick-tr {
+            top: -6px;
+            right: -6px;
+        }
+
+        .tick-bl {
+            bottom: -6px;
+            left: -6px;
+        }
+
+        .tick-br {
+            bottom: -6px;
+            right: -6px;
+        }
+
+        .thick-underline {
+            border-bottom: 3px solid #111111;
+            padding-bottom: 1px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .thick-underline:hover {
+            color: #e93314;
+            border-color: #e93314;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f3f2f0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #aaa;
+        }
+
+
+        /* Nav & Footer specific styles */
+        .font-display {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-weight: 800;
+        }
+
+        .rounded-section {
+            border-radius: 0.5rem;
+            /* Matches index.html */
+        }
+
+        .sharp-border {
+            border-radius: 0;
+        }
+
+        .sharp-border-white {
+            border-radius: 0;
+            border: 1px solid white;
+        }
+
+        .footer-link {
+            position: relative;
+            display: inline-block;
+            transition: color 0.2s ease;
+            overflow: hidden;
+        }
+
+        .footer-link:hover {
+            color: #ff3333;
+            /* Matches the outer background color red */
+        }
+
+        /* Apply text animation on the footer and nav items */
+        .footer-link span,
+        .nav-social-link span,
+        .nav-menu-item span {
+            display: inline-block;
+            position: relative;
+            text-shadow: 0px 1.3em currentColor;
+            transform: translateY(0em) rotate(0.001deg);
+            transition: transform 0.5s cubic-bezier(0.625, 0.05, 0, 1);
+        }
+
+        .footer-link:hover span,
+        .nav-social-link:hover span,
+        .nav-menu-item:hover span {
+            transform: translateY(-1.3em) rotate(0.001deg);
+        }
+
+        .nav-social-link,
+        .nav-menu-item {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Bento Grid Span CSS */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .span-row-2 {
+                grid-row: span 2;
+            }
+        }
+
+
+        /* Click-to-Zoom */
+        .zoom-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(24, 24, 24, 0.96);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+            cursor: zoom-out;
+        }
+
+        .zoom-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .zoom-clone {
+            object-fit: cover;
+            will-change: transform, width, height, top, left, border-radius;
+            cursor: zoom-out;
+            z-index: 101;
+            position: fixed;
+        }
+
+        .img-zoomable {
+            cursor: zoom-in;
+        }
+
+
+        /* Filter active state */
+        .active-filter {
+            color: #e93314 !important;
+            border-color: #e93314 !important;
+        }
+    </style>
+    
+</head>
+
+<body class="min-h-screen pt-24 pb-0 overflow-x-hidden bg-white">
+
+    
+<nav id="main-nav"
+            class="fixed top-0 w-full z-50 px-6 py-4 md:py-6 flex flex-row items-center justify-between transition-transform duration-300">
+
+            
+            <div
+                class="nav-item text-white font-display text-2xl tracking-tighter uppercase whitespace-nowrap drop-shadow-md">
+                <a href="./index.html" class="inline-block cursor-pointer">
+                    <img loading="lazy" id="nav-logo" src="./assets/logo/logo.png" alt="Abeiku Edqlics"
+                        class="h-10 md:h-12 w-auto object-contain transition-all duration-500">
+                </a>
+            </div>
+
+            
+            <div class="nav-item flex items-center gap-2 max-w-full relative z-50">
+                
+                <div class="relative w-[38px] h-[38px]">
+                    <div id="nav-container"
+                        class="absolute top-0 right-0 bg-white sharp-border overflow-hidden w-[38px] h-[38px] transition-shadow z-50">
+                        
+                        <button id="nav-toggle"
+                            class="absolute top-0 right-0 w-[38px] h-[38px] bg-white border border-black hover:bg-gray-200 transition-colors flex items-center justify-center text-black outline-none z-20">
+                            <div id="icon-menu"
+                                class="absolute inset-0 flex flex-col items-center justify-center gap-[3px]">
+                                <div class="w-[14px] h-[1.5px] bg-black"></div>
+                                <div class="w-[14px] h-[1.5px] bg-black"></div>
+                            </div>
+                            <div id="icon-close"
+                                class="absolute inset-0 flex items-center justify-center opacity-0 scale-50 -rotate-90">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        <div id="nav-content"
+                            class="absolute top-[38px] left-0 w-[280px] px-6 pb-6 pt-4 flex flex-col opacity-0 pointer-events-none z-10">
+                            <nav class="flex flex-col gap-2 text-xl font-bold tracking-tight text-black mt-2">
+                                <div class="overflow-hidden py-1"><a href="./index.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>Home</span></a>
+                                </div>
+                                <div class="overflow-hidden py-1"><a href="./Projects.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>Work</span></a>
+                                </div>
+                                <div class="overflow-hidden py-1"><a href="./AboutUs.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>About</span></a>
+                                </div>
+                                <div class="overflow-hidden py-1"><a href="./contact.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>Contact</span></a>
+                                </div>
+                            </nav>
+                            <a href="https://wa.me/233247154587" target="_blank"
+                                class="md:hidden mt-4 bg-[#ff3333] flex items-center justify-center sharp-border hover:bg-[#e62e2e] transition-colors h-[38px] w-[38px] group border border-[#111]">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 21.085c-1.637 0-3.238-.43-4.652-1.246l-5.176 1.357 1.385-5.045a9.012 9.012 0 0 1-1.282-4.664c0-4.996 4.065-9.062 9.061-9.062 4.997 0 9.062 4.066 9.062 9.062 0 4.997-4.065 9.061-9.062 9.061h-.664v-.463ZM12 4.962C8.106 4.962 4.94 8.128 4.94 12.022c0 1.547.493 3.033 1.42 4.225l-.83 3.024 3.095-.812a7.042 7.042 0 0 0 3.375.856c3.894 0 7.06-3.166 7.06-7.06 0-3.894-3.166-7.06-7.06-7.06v.767h.767v-.767ZM15.42 13.918c-.187-.094-1.11-.548-1.282-.61-.173-.063-.298-.094-.423.094-.125.187-.484.61-.594.734-.11.125-.218.14-.406.047-.187-.094-.791-.292-1.507-.93-.556-.495-.932-1.107-1.041-1.295-.11-.188-.012-.29.082-.383.084-.083.187-.218.28-.328.094-.11.125-.187.187-.312.063-.125.032-.234-.015-.328-.047-.094-.423-1.02-.579-1.398-.152-.367-.306-.317-.423-.323-.11-.005-.234-.005-.36-.005-.125 0-.328.047-.5.234-.173.188-.656.64-.656 1.56s.672 1.81.766 1.936c.094.125 1.32 2.013 3.197 2.823.447.193.796.308 1.069.394.45.143.86.123 1.183.075.362-.054 1.11-.453 1.266-.89.157-.438.157-.813.11-.89-.047-.078-.173-.125-.36-.219Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <a href="https://wa.me/233247154587" target="_blank"
+                    class="hidden md:flex bg-[#ff3333] hover:bg-[#e62e2e] items-center justify-center sharp-border transition-colors h-[38px] w-[38px] group border border-[#111]">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.031 21.085c-1.637 0-3.238-.43-4.652-1.246l-5.176 1.357 1.385-5.045a9.012 9.012 0 0 1-1.282-4.664c0-4.996 4.065-9.062 9.061-9.062 4.997 0 9.062 4.066 9.062 9.062 0 4.997-4.065 9.061-9.062 9.061h-.664v-.463ZM12 4.962C8.106 4.962 4.94 8.128 4.94 12.022c0 1.547.493 3.033 1.42 4.225l-.83 3.024 3.095-.812a7.042 7.042 0 0 0 3.375.856c3.894 0 7.06-3.166 7.06-7.06 0-3.894-3.166-7.06-7.06-7.06v.767h.767v-.767ZM15.42 13.918c-.187-.094-1.11-.548-1.282-.61-.173-.063-.298-.094-.423.094-.125.187-.484.61-.594.734-.11.125-.218.14-.406.047-.187-.094-.791-.292-1.507-.93-.556-.495-.932-1.107-1.041-1.295-.11-.188-.012-.29.082-.383.084-.083.187-.218.28-.328.094-.11.125-.187.187-.312.063-.125.032-.234-.015-.328-.047-.094-.423-1.02-.579-1.398-.152-.367-.306-.317-.423-.323-.11-.005-.234-.005-.36-.005-.125 0-.328.047-.5.234-.173.188-.656.64-.656 1.56s.672 1.81.766 1.936c.094.125 1.32 2.013 3.197 2.823.447.193.796.308 1.069.394.45.143.86.123 1.183.075.362-.054 1.11-.453 1.266-.89.157-.438.157-.813.11-.89-.047-.078-.173-.125-.36-.219Z"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+        
+    <div class="fixed top-[72px] left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white/50 mix-blend-difference pointer-events-none select-none">
+        <a href="./index.html" class="pointer-events-auto hover:text-white transition-colors duration-200">Home</a>
+        <span class="text-white/30">/</span>
+        <span class="text-white">Work</span>
+    </div>
+
+    <main class="w-full px-6 relative z-10 pb-20 md:pb-32">
+
+        <header class="max-w-4xl mb-24 relative z-20">
+            <p class="gsap-header text-[9px] font-bold tracking-[0.2em] uppercase text-brand-muted mb-6">
+                WHAT WE DO
+            </p>
+
+            <h1
+                class="gsap-header font-display text-[3.5rem] sm:text-[5rem] md:text-[6.5rem] leading-[0.9] tracking-tightest mb-8 text-brand-dark">
+                Visual stories,<br>beautifully told.
+            </h1>
+
+            <p class="gsap-header text-[15px] leading-relaxed max-w-[32rem] text-brand-dark mb-12 font-medium">
+                Get bespoke, cinematic visual content that delivers your message with precision and emotional impact.
+                Our work is crafted to hold attention, stir feeling, and connect with your audience in a way only truly
+                considered storytelling can.
+            </p>
+
+            <nav
+                class="gsap-header flex flex-wrap items-baseline gap-x-3 gap-y-4 text-[13px] font-bold uppercase tracking-wide">
+                <a href="#" class="thick-underline filter-btn active-filter" data-filter="all">All</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="portrait">Portraits</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="weddings">Weddings</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="food">Food</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="funeral">Funerals</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="corperate-events">Corporate Events</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="headshot">Headshot Lounge</a>
+                <a href="#" class="thick-underline filter-btn" data-filter="graduation">Graduations</a>
+            </nav>
+        </header>
+
+        <section class="bento-grid relative z-10" id="gallery-grid">
+
+            <div
+                class="hidden lg:flex absolute -top-12 right-0 w-32 h-32 items-center justify-center pointer-events-none z-50">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-brand-red opacity-90"
+                    style="animation: spin 15s linear infinite;">
+                    <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                    <text class="text-[9.5px] font-bold uppercase tracking-[0.2em]" fill="currentColor">
+                        <textPath href="#curve" startOffset="0%">EXPLORE PROJECTS • EXPLORE PROJECTS •</textPath>
+                    </text>
+                </svg>
+            </div>
+
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_102_cc87d9ba-ca79-4903-85d1-02971e6a8272.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_107_b2d4f790-ccc6-4eac-b0c1-1a7c8f86e1d1.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_112_246fb182-b5f0-4889-9cb8-8488d302c3ce.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_117_9ac009ad-7e6c-4a48-ae23-f23dd47841b2.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_122_5e86b1c7-45d3-4908-990b-4e8b49f929ba.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_127_ebe902f0-1c68-43d0-8c48-05310218a532.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_132_e06b06e5-a1a6-4a43-8616-aad22b84181f.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_137_bc37f091-4cfd-462b-9800-071e0268ee59.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_142_d7a06db5-eeb5-437d-b8ef-6117faaa10e7.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_147_78495fe6-2f08-414e-a169-29ecf40ff070.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_152_3b1b1024-fa44-4c9b-9e83-5770482d33f6.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_157_f1df9742-f895-418a-8dd0-62eb1067ee8e_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_161_f9481aa3-9748-45ca-a654-28c227ff0d9d_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_165_de3df813-0e66-4023-8cd1-acbc69789c09_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_169_c83d2ae6-a8ba-4c93-a181-07529bb16273_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_173_e81043a8-6fa9-4493-9e10-485ba19dc4b3_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_177_6a4ff561-0a91-40c6-a74f-b93022e3c5ee_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_181_4c7a7e38-6f0c-46b3-8668-b570ccb7f914_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_185_ca9f9238-283e-4d7f-befa-ef38cf34af75_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_189_8e1bfd16-84a0-468c-9196-61f8da3898a0_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_193_593eda98-be35-48f5-b72c-a20a4ba8c6a4_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_197_6a672b4f-0ffc-49a3-81cd-069258a506fb_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_201_91bca45e-b030-4213-acba-cbbd900ec8a0_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_205_7265d1a2-5f35-48e3-8782-5fbc0be6765b_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_209_3c45d532-db3d-4754-998c-2105f8f09b0c_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_213_b5d65f67-12eb-4543-b960-5b0900e5b704_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_217_7865f515-a622-419e-b23f-48ccf0b50a96_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_221_61fa54ba-4c4a-4c3f-b2b2-475915244de3_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_225_f367ccee-1a75-4f35-ad49-894123e4c9c9_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_229_003b0357-a735-4047-9e14-8422162a69d0_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_233_ef6ab5f0-7515-4b72-b2cb-8b698fbb1e4e_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_2_5f95c3d1-351e-4e81-8f4f-1d03fd7ac2b7_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_39_48e32f72-1e64-490a-ac73-969a716492ab_rw_1920.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_3_5da119b0-4a31-4e59-8200-2d2697a16b48_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_41_4a770643-0acd-4531-87fb-acb1b3445d3d_rw_1920.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_42_c8e8ca75-5155-4f68-9955-b422a57511e1_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_46_e4446f04-7ece-48af-bb6b-e883079f2d1d_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_4_9697282f-9a30-4068-8566-cae54aecb636_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_50_ad8498dc-9aab-46dc-9d6e-00ad4a6fd057_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_54_ce55d181-2c84-43cc-a233-f89c2831235c_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_58_e0b2124d-122e-4f6f-a983-1e849eb72e12_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_5_0a45c8b5-7436-4cdd-b765-f6918785decb_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_62_ab47f305-7d03-490c-bd05-6642dd78554e_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_66_ebcef231-9a77-4d4b-9b3c-4985d1cfee39_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_6_edf954db-7f87-42d7-a32b-3b00f44c69f9_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_70_08d13b66-1269-41a4-84da-12b7bd32865c_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_74_ee6f684b-c05a-4792-8b7f-22e0a018425c_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_78_24a4ac8b-e177-4bb1-9b55-4d1bd892c42f_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_7_a156d324-bb30-4c2e-ad22-b1ad61fcb619_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2"
+                data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_82_01cf9219-0490-40ac-8b47-bfb8f76e2fb0_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_86_7b9126df-fe8b-4afa-8165-f8b4a46cdd31_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_90_89ff5a67-f7df-4f78-a353-a91810dd4bf4_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_94_1b76126e-f4b0-4630-b8db-2ba9c95988e4_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="corperate-events">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/CorperateEvents/webp/imgi_98_0938624a-fcb2-46a6-8fbf-0514ce7a6326_rw_3840.webp"
+                            alt="Corporate Events photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_12_02231880-4997-450a-9186-991b3afee7bc.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_13_9f6f9049-dcc9-48d4-8ba8-a537a8d68338.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_14_2f810d6a-b0e5-402b-bab5-bb96ce91a467.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_15_b7e29b85-d1e8-4cbd-a421-7a4f8a01211f.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_16_2e27109a-aa7c-4769-86a8-e4a90c3c645a.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_17_1a4a4edf-a040-4698-ade8-e6c5bd3e4a8c.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_18_a3b71e40-5fc6-485d-bbad-9237589a4e33.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_45_7ad9e375-31db-4f03-8cd6-1a7548570d92_rwc_0x0x6426x4284x4096.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_4_7e96d6d4-91ae-4a25-86ca-4f61eab87fd1_rw_3840.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_51_4083ae25-3d52-4b6a-9795-6f646b6e8854.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="food">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/foods/webp/imgi_9_53104df1-b7bc-42e6-bdfa-f14f5dc0609e_rw_3840.webp"
+                            alt="Food photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune2.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune3.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune4.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune5.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune6.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="funeral">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy" src="./assets/images/Funeral/fune7.jpg" alt="Funerals photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_11_14bd7819-2eb2-40ec-bfb4-3ba368eceaaf_rw_1200.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_27_30b4b06d-11b7-468c-977a-2db16a6b2f87_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_2_a1eb0216-5228-4380-9aad-5e48fce6c2bb_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_30_cd8ddda9-28e4-419d-8fd5-5127170e5be7_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_33_8ee5adc1-4af7-4749-8278-7813c71e1ba1_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_38_7abf6d1b-9ee2-40ee-8847-1f084bb6b7e0_rw_1200.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_39_34b9960c-30bb-4b0f-97fa-aba1cdd96aee_rw_3840.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_3_58557f18-c1aa-4ddd-bac3-5d2c5a359acd_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_43_aa67c49a-6c71-4dcf-a450-7777fc4274dd_rw_3840.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_47_bc21dc75-abba-4c82-9977-51d088a75cfd_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_4_3b3a0667-997d-4384-a32a-c5310accad58_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_52_49e8094b-e9cf-4ff5-965c-8d56fde1b404_rw_1200.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_6_3711b093-7a0c-4536-b996-6dfff9788920_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="graduation">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Graduation/webp/imgi_7_563489fe-334c-47dd-aeaa-843e7d527871_rw_1920.webp"
+                            alt="Graduations photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_10_6d56039b-9719-4b2a-80ff-b6c63a06e9da.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_31_cc33ff35-7645-4710-993e-3a071d156ab5.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_34_38384790-9242-4531-9789-4fc328448ffa.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_38_453e9d03-af33-4fde-bfe7-f3905f3052d9.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_3_96ced457-896b-41cc-8651-b1196d474be3_rw_3840.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_43_68e894b1-5362-41fb-9091-77914317c1d6_rw_3840.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_47_2f189f00-2f3a-4e58-89f3-40ee945c5327_rw_1920.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_50_ab6040f2-410b-4aed-ac13-33e1a069221a_rw_1920.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_53_91fe2e3c-d3aa-48ec-9fd9-d9f2bfbae1fd_rw_3840.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_7_5d2540dc-e469-4cff-ae58-cc3a2695230c_rw_3840.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="headshot">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/HeadshotLongue/webp/imgi_9_ad167976-54b0-4494-acc6-37112283eb69.webp"
+                            alt="Headshot Lounge photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_10_33d75198-052d-458c-9d26-cb88c610434a_rw_3840.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_11_21b32584-59b5-49e1-aa71-18a0dfa23a43_rw_1920.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_12_29724a45-6b4e-49d0-923f-292acadecf26_rw_3840.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_14_3e74fcdd-4f2a-4bf1-8d85-728bbd3f0c15.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_2_9d3ddf5b-005c-46c8-ae2c-250b8b64b628_rw_1920.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_37_7d2e2b5f-725d-48dc-aa73-d5963e23a60d.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_41_1d05b533-c5f6-417c-b240-e7cfade2abef.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_5_d0ce4418-ecb1-4f4f-a7e5-a02c816c3e24_rw_1920.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_7_1a360a09-e90f-4b8e-88ad-97e61820fa48_rw_3840.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_8_c7ab4b32-34d6-4336-9a8c-0d5920c91a8b_rw_3840.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="portrait">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/potraits/webp/imgi_9_c4f19e41-5d8e-4742-bc10-f980d2d6eb4a_rw_3840.webp"
+                            alt="Portraits photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_12_9e9401b9-728e-48e2-9ba2-a917276e4147.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_14_39c35198-4f0c-48e7-8530-3899c9b846d7.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_19_e0c3254f-7666-47b6-a997-154af4cfe4f5.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_27_8b50bb02-7017-48df-8c06-1cb9b8d30dfc.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_32_ac76b4b6-fb2d-4ef7-bba5-68b36edb687c.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_37_040850a0-1821-46a2-847d-1e7d2a68a17c.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_42_f8381d3d-cd60-4518-8232-a9453d15d840.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_47_40aea9c2-95e0-41f7-911a-7f0688290f47.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_52_4d66244f-684a-420c-9173-441b965001fc.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_57_eac83d45-e363-4aa0-86d2-988e822645ee.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_62_82154b1f-e57e-41df-a5f5-1d168ed6eb78.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col span-row-2" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_67_29c3ccbc-05cc-40f9-8a1e-1fbd8814483c.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_72_b2e0b1d1-29bf-41e5-9988-cb55062acab3.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_77_42eafc58-f0d4-42de-b459-599037ef31b1_rw_3840.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_81_e39fb81b-6408-4042-b569-440498aa8038_rw_3840.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_85_50c41828-0b6e-4a35-ab8f-201ec446d45a_rw_3840.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+            <article class="gsap-card group cursor-pointer relative flex flex-col" data-filter="weddings">
+                <figure class="relative">
+                    <div class="overflow-hidden bg-brand-cardBg">
+                        <img loading="lazy"
+                            src="./assets/images/Weddings/webp/imgi_89_a800f891-fa59-4072-8fad-53ee85c4f440_rw_3840.webp"
+                            alt="Weddings photo"
+                            class="zoomable w-full h-auto object-contain cursor-zoom-in transform transition-transform duration-700 ease-out group-hover:scale-[1.03] block">
+                    </div>
+                </figure>
+            </article>
+        </section>
+    </main>
+
+    
+<footer id="editorial-footer"
+            class="w-full bg-black z-10 relative text-white rounded-t-2xl pt-12 pb-8 md:pt-16 md:pb-12">
+            <div class="flex flex-col lg:flex-row w-full gap-0">
+
+                
+                
+                <div
+                    class="footer-col w-full lg:w-[35%]  bg-black text-white p-8 md:p-10 lg:p-12 flex flex-col justify-between order-2 lg:order-3 ">
+
+                    <div class="newsletter-element">
+                        <h3
+                            class="text-xl md:text-2xl font-medium leading-snug tracking-tight mb-6 md:mb-8 text-center lg:text-left text-white">
+                            Let’s create photographs and films that give your story room to move.
+                        </h3>
+
+                        <form
+                            class="flex w-full h-[48px] border border-zinc-700 rounded-lg overflow-hidden focus-within:ring-2 ring-[#ff3333] transition-all bg-zinc-900 mb-10 lg:mb-16">
+                            <input type="email" placeholder="Email Address"
+                                class="flex-1 min-w-0 h-full px-3 md:px-4 text-sm font-bold bg-transparent outline-none text-white placeholder:text-zinc-500 border-r border-zinc-800"
+                                required>
+                            <button type="submit"
+                                class="h-full min-w-[80px] px-4 md:px-6 bg-white text-black text-[9px] font-bold uppercase tracking-[0.2em] flex items-center justify-center hover:bg-gray-100 transition-colors whitespace-nowrap shrink-0">
+                                <span>SUBMIT</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="meta-element flex flex-col items-center text-center mt-auto">
+
+                        <div class="flex gap-2 md:gap-3 mb-8 lg:mb-10 lg:self-center">
+                            
+                            <a href="https://web.facebook.com/Edqlics?_rdc=1&_rdr#" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/abeiku_edqlics/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.tiktok.com/@abeikuedqlics" target="_blank" rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.78-1.15 5.54-3.33 7.65-2.27 2.19-5.46 3.44-8.68 3.39-3.31-.05-6.49-1.47-8.7-3.88C-.3 21.68-.84 18.25.76 15.11c1.37-2.68 4.11-4.52 7.15-4.72 0 1.34.01 2.68-.01 4.02-1.57.17-3.13.98-4.07 2.27-.99 1.34-1.25 3.19-.66 4.75.56 1.48 1.95 2.6 3.52 2.89 1.63.3 3.37-.09 4.67-1.16 1.3-1.07 2.06-2.69 2.16-4.38.16-4.66.1-9.33.12-14.01 1.05.02 2.1-.03 3.15-.04l.01-.01-.27-.7z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="http://www.youtube.com/@Edqlics" target="_blank" rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21.582 6.186a2.684 2.684 0 0 0-1.884-1.9C18.04 3.833 12 3.833 12 3.833s-6.04 0-7.698.453a2.684 2.684 0 0 0-1.884 1.9C1.96 7.859 1.96 12 1.96 12s0 4.141.458 5.814a2.684 2.684 0 0 0 1.884 1.9c1.658.453 7.698.453 7.698.453s6.04 0 7.698-.453a2.684 2.684 0 0 0 1.884-1.9C22.04 16.141 22.04 12 22.04 12s0-4.141-.458-5.814zM9.96 15.429V8.571L15.96 12l-6 3.429z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="text-[10px] md:text-[11px] text-center text-zinc-300 space-y-3 md:space-y-4">
+                            <p class="font-medium tracking-wide text-white">&copy; 2026 Abeiku Edqlics</p>
+                            <a href="#"
+                                class="inline-block underline underline-offset-4 hover:text-[#ff3333] transition-colors mt-2 text-white">
+                                Site Credit
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                
+                <div
+                    class="footer-col w-full lg:w-[30%]  bg-black text-white p-8 md:p-10 lg:p-12 flex flex-col items-center justify-between text-center order-1 lg:order-1 ">
+
+                    <div class="brand-element flex flex-col items-center mt-4">
+                        <div class="mb-3">
+                            <img loading="lazy" src="./assets/logo/logo.png" alt="Abeiku Edqlics Logo"
+                                class="h-24 md:h-32 w-auto object-contain">
+                        </div>
+                        <span class="font-bold text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-zinc-400">Est.
+                            2026</span>
+                    </div>
+
+                    <h3
+                        class="brand-element font-display text-lg md:text-xl lg:text-2xl leading-snug my-10 lg:my-12 max-w-[250px] text-white">
+                        Here to help you tell your story.
+                    </h3>
+
+                </div>
+
+                
+                
+                <div
+                    class="footer-col w-full lg:w-[35%] bg-black text-white p-8 md:p-10 lg:p-12 order-3 lg:order-2  flex flex-col justify-center ">
+                    <div class="grid grid-cols-2 gap-y-10 gap-x-6 h-full">
+
+                        <div class="nav-group">
+                            <h3 class="font-display text-sm uppercase tracking-wider mb-4 md:mb-5 text-white">Navigation
+                            </h3>
+                            <ul class="space-y-3 text-xs lg:text-sm font-medium text-zinc-300">
+                                <li><a href="./index.html" class="footer-link"><span>Home</span></a></li>
+                                <li><a href="./Projects.html" class="footer-link"><span>Work</span></a></li>
+                                <li><a href="./AboutUs.html" class="footer-link"><span>About</span></a></li>
+                                <li><a href="./contact.html" class="footer-link"><span>Contact</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-group">
+                            <h3 class="font-display text-sm uppercase tracking-wider mb-4 md:mb-5 text-white">Legal</h3>
+                            <ul class="space-y-3 text-xs lg:text-sm font-medium text-zinc-300">
+                                <li><a href="#" class="footer-link"><span>FAQs</span></a></li>
+                                <li><a href="./sitemap.xml" class="footer-link"><span>Sitemap</span></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+    <script src="./assets/vendor/gsap/gsap.min.js"></script>
+    <script src="./assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // =============================================
+            // 1. NAVBAR LOGIC (hamburger menu)
+            // =============================================
+            gsap.from(".nav-item", {
+                y: -20, opacity: 0, duration: 0.7, stagger: 0.1,
+                ease: "power4.out", delay: 0.2
+            });
+
+            const navTl = gsap.timeline({
+                paused: true, reversed: true,
+                defaults: { ease: "power3.inOut" }
+            });
+            navTl.to("#nav-container", { width: 280, height: 280, duration: 0.5 }, 0);
+            navTl.to("#icon-menu", { opacity: 0, scale: 0.5, rotation: 90, duration: 0.3 }, 0);
+            navTl.to("#icon-close", { opacity: 1, scale: 1, rotation: 0, duration: 0.3 }, 0.1);
+            navTl.to("#nav-content", { opacity: 1, pointerEvents: "auto", duration: 0.1 }, 0.15);
+            navTl.from(".nav-menu-item", { y: 15, opacity: 0, duration: 0.3, stagger: 0.05, ease: "power4.out" }, 0.2);
+            navTl.from(".nav-footer", { y: 10, opacity: 0, duration: 0.3, ease: "power3.out" }, 0.3);
+
+            const toggleBtn = document.getElementById('nav-toggle');
+            function closeNav() { if (!navTl.reversed()) navTl.timeScale(1.5).reverse(); }
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navTl.reversed() ? navTl.timeScale(1).play() : navTl.timeScale(1.5).reverse();
+                });
+            }
+            document.addEventListener('click', (e) => {
+                const navContainer = document.getElementById('nav-container');
+                if (navContainer && !navContainer.contains(e.target)) closeNav();
+            });
+            window.addEventListener('scroll', () => { closeNav(); }, { passive: true });
+
+            // =============================================
+            // 2. FILTER LOGIC
+            // =============================================
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryGrid = document.getElementById('gallery-grid');
+            const allCards = galleryGrid ? Array.from(galleryGrid.querySelectorAll('[data-filter]')) : [];
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const filter = btn.getAttribute('data-filter');
+
+                    filterBtns.forEach(b => b.classList.remove('active-filter'));
+                    btn.classList.add('active-filter');
+
+                    allCards.forEach(card => {
+                        const cardFilter = card.getAttribute('data-filter');
+                        const match = filter === 'all' || cardFilter === filter;
+                        if (match) {
+                            card.style.display = '';
+                            gsap.fromTo(card, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
+                        } else {
+                            gsap.to(card, {
+                                opacity: 0, duration: 0.2,
+                                onComplete: () => {
+                                    card.style.display = 'none';
+                                    ScrollTrigger.refresh();
+                                }
+                            });
+                        }
+                    });
+
+                    // Refresh scrolltrigger after fading elements in to fix footer positioning
+                    setTimeout(() => {
+                        ScrollTrigger.refresh();
+                    }, 450);
+                });
+            });
+
+            // =============================================
+            // 3. CLICK-TO-ZOOM
+            // =============================================
+            const overlay = document.getElementById('overlay');
+            let activeClone = null;
+            let activeOriginal = null;
+            let isAnimating = false;
+
+            document.addEventListener('click', (e) => {
+                const img = e.target.closest('.zoomable');
+                if (img && !isAnimating && !activeClone) {
+                    openZoom(img);
+                    return;
+                }
+            });
+
+            function openZoom(originalImg) {
+                isAnimating = true;
+                activeOriginal = originalImg;
+                const rect = originalImg.getBoundingClientRect();
+
+                activeClone = originalImg.cloneNode(true);
+                activeClone.classList.remove('zoomable');
+                activeClone.classList.add('zoom-clone');
+                activeClone.style.pointerEvents = 'auto';
+
+                gsap.set(activeClone, {
+                    position: 'fixed',
+                    top: rect.top, left: rect.left,
+                    width: rect.width, height: rect.height,
+                    margin: 0, zIndex: 101, borderRadius: '4px'
+                });
+
+                document.body.appendChild(activeClone);
+                originalImg.style.opacity = '0';
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                const padding = 40;
+                const maxW = vw - padding * 2;
+                const maxH = vh - padding * 2;
+                const aspectRatio = rect.width / rect.height;
+                let targetWidth, targetHeight;
+
+                if (maxW / maxH > aspectRatio) {
+                    targetHeight = maxH;
+                    targetWidth = targetHeight * aspectRatio;
+                } else {
+                    targetWidth = maxW;
+                    targetHeight = targetWidth / aspectRatio;
+                }
+
+                const targetTop = (vh - targetHeight) / 2;
+                const targetLeft = (vw - targetWidth) / 2;
+
+                gsap.to(activeClone, {
+                    top: targetTop, left: targetLeft,
+                    width: targetWidth, height: targetHeight,
+                    borderRadius: '4px', duration: 0.5, ease: "power3.inOut",
+                    onComplete: () => { isAnimating = false; }
+                });
+
+                activeClone.addEventListener('click', closeZoom, { once: true });
+                overlay.addEventListener('click', closeZoom, { once: true });
+                window.addEventListener('scroll', closeZoom, { once: true });
+            }
+
+            function closeZoom() {
+                if (isAnimating || !activeClone || !activeOriginal) return;
+                isAnimating = true;
+                const rect = activeOriginal.getBoundingClientRect();
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+
+                gsap.to(activeClone, {
+                    top: rect.top, left: rect.left,
+                    width: rect.width, height: rect.height,
+                    borderRadius: '4px', duration: 0.4, ease: "power3.inOut",
+                    onComplete: () => {
+                        activeOriginal.style.opacity = '1';
+                        activeClone.remove();
+                        activeClone = null;
+                        activeOriginal = null;
+                        isAnimating = false;
+                    }
+                });
+            }
+        });
+
+        // =============================================
+        // 4. SCROLL ANIMATIONS (needs load so ScrollTrigger is ready)
+        // =============================================
+        window.addEventListener("load", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Footer column animations
+            const columns = gsap.utils.toArray('.footer-col');
+            columns.forEach((col) => {
+                const navGroups = col.querySelectorAll('.nav-group');
+                const ctas = col.querySelectorAll('.cta-group');
+                const tl = gsap.timeline({
+                    scrollTrigger: { trigger: col, start: "top 95%", toggleActions: "play none none reverse" }
+                });
+                if (navGroups.length > 0) {
+                    tl.from(navGroups, { y: 20, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" });
+                }
+                if (ctas.length > 0) {
+                    tl.from(ctas, { y: 20, opacity: 0, duration: 0.6, ease: "power2.out" }, "-=0.4");
+                }
+            });
+        });
+
+        // =============================================
+        // 5. NAVBAR HIDE ON SCROLL
+        // =============================================
+        let lastScroll = 0;
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                nav.classList.add('-translate-y-full');
+            } else {
+                nav.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+
+    <div class="zoom-overlay" id="overlay"></div>
+
+    
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 z-[999] flex flex-col items-center justify-center gap-1 opacity-0 pointer-events-none transition-all duration-300"
+        aria-label="Back to top">
+        <div
+            class="bg-black text-white w-[44px] h-[44px] flex items-center justify-center sharp-border border border-[#222] hover:bg-[#ff3333] transition-colors group">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="square" stroke-linejoin="miter" d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+        </div>
+        <span class="text-[8px] font-bold uppercase tracking-[0.15em] text-black">Top</span>
+    </button>
+
+    <style>
+        #back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+
+    <script>
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+
+    
+    <div id="transition-overlay"
+        class="fixed inset-0 bg-[#1a1a1a] z-[9999] flex items-center justify-center pointer-events-none shadow-2xl"
+        style="transform: translateY(-100%)">
+        <div class="overflow-hidden">
+            <span id="transition-text" style="font-family: 'JetBrains Mono', monospace;"
+                class="text-[#ff3333] text-lg tracking-[0.2em] inline-block opacity-100 transform translate-y-0">
+                [ LOADING ]
+            </span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const overlay = document.getElementById('transition-overlay');
+            const overlayText = document.getElementById('transition-text');
+
+            // Set initial page name based on current URL
+            let currentName = "LOADING";
+            const path = window.location.pathname.toLowerCase();
+            if (path.includes("index") || path.endsWith("/") || path === "") currentName = "HOME";
+            else if (path.includes("projects")) currentName = "WORK";
+            else if (path.includes("contact")) currentName = "CONTACT";
+            else if (path.includes("reels")) currentName = "REELS";
+            else if (path.includes("about")) currentName = "ABOUT US";
+            overlayText.innerText = `[ ${currentName} ]`;
+
+            // Animate IN (Reveal page) - only if navigating from another page
+            if (sessionStorage.getItem('isTransitioning')) {
+                sessionStorage.removeItem('isTransitioning');
+                gsap.set(overlay, { y: '0%' });
+                const tl = gsap.timeline();
+                tl.to(overlayText, { y: -20, opacity: 0, duration: 0.3, ease: "power3.in", delay: 0.2 })
+                    .to(overlay, { y: '-100%', duration: 0.8, ease: "power4.inOut" }, "-=0.1");
+            }
+
+            // Handle link clicks for Animate OUT
+            document.querySelectorAll('a[href]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    const target = this.getAttribute('target');
+
+                    // Ignore empty, hash, tel, mailto, and target="_blank" links
+                    if (!href || href === '#' || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || target === '_blank') {
+                        return;
+                    }
+
+                    // Ignore external links
+                    if (href.startsWith('http') && !href.includes(window.location.hostname)) return;
+
+                    e.preventDefault();
+
+                    let targetName = "LOADING";
+                    const hrefLower = href.toLowerCase();
+                    if (hrefLower.includes("index") || hrefLower === "./" || hrefLower === "/") targetName = "HOME";
+                    else if (hrefLower.includes("projects")) targetName = "WORK";
+                    else if (hrefLower.includes("contact")) targetName = "CONTACT";
+                    else if (hrefLower.includes("reels")) targetName = "REELS";
+                    else if (hrefLower.includes("about")) targetName = "ABOUT US";
+                    overlayText.innerText = `[ ${targetName} ]`;
+                    sessionStorage.setItem('isTransitioning', 'true');
+
+                    // Animate OUT (Cover page)
+                    const outTl = gsap.timeline({
+                        onComplete: () => {
+                            window.location.href = href;
+                        }
+                    });
+
+                    outTl.set(overlay, { y: '100%' })
+                        .to(overlay, { y: '0%', duration: 0.8, ease: "power4.inOut" })
+                        .fromTo(overlayText,
+                            { y: 20, opacity: 0 },
+                            { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" },
+                            "-=0.2"
+                        );
+                });
+            });
+        });
+
+        // Handle browser back button (safari/bfcache)
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) {
+                const overlay = document.getElementById('transition-overlay');
+                const overlayText = document.getElementById('transition-text');
+                const tl = gsap.timeline();
+                tl.to(overlayText, { y: -20, opacity: 0, duration: 0.3, ease: "power3.in" })
+                    .to(overlay, { y: '-100%', duration: 0.8, ease: "power4.inOut" }, "-=0.1");
+            }
+        });
+    </script>
+</body>
+
+</html>

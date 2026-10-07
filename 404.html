@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <script src="./assets/vendor/gsap/gsap.min.js"></script>
+    
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base reset and fonts matching the homepage */
+        body { 
+            font-family: 'Satoshi', sans-serif; 
+            margin: 0;
+            background-color: #000;
+        }
+        
+        .font-display { 
+            font-family: 'Cabinet Grotesk', sans-serif; 
+        }
+        
+        /* Neobrutalist utilities */
+        .sharp-border {
+            border: 1px solid #111;
+        }
+        .sharp-border-white {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Large stroke text for the background */
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="text-white antialiased overflow-hidden">
+
+    
+    <main class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+        
+        
+        <div class="bg-404 absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
+            <span class="font-display text-[50vw] md:text-[40vw] leading-none tracking-tighter text-stroke">
+                404
+            </span>
+        </div>
+
+        
+        <div class="relative z-20 flex flex-col items-center px-6 text-center w-full max-w-4xl mx-auto mt-12">
+            
+            <span class="error-el text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-[#ff3333] mb-4 md:mb-6">
+                System Error
+            </span>
+
+            <h1 class="error-el font-display text-5xl md:text-8xl lg:text-[7rem] leading-[0.9] tracking-tighter uppercase mb-6 drop-shadow-xl">
+                The Frame <br/> Is Empty.
+            </h1>
+
+            <p class="error-el max-w-lg text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] text-gray-400 leading-relaxed mb-10">
+                The story you are looking for has been moved, deleted, or never existed. Let's get your focus back on track.
+            </p>
+            
+            
+            <a href="../index.html" class="error-el bg-white text-black text-[9px] font-bold uppercase tracking-[0.2em] pr-4 flex items-center sharp-border hover:bg-gray-200 transition-colors whitespace-nowrap h-[42px] group">
+                
+                <div class="bg-[#ff3333] h-full px-4 flex items-center justify-center border-r border-[#111] mr-4 group-hover:bg-[#e62e2e] transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="square" stroke-linejoin="miter" d="M19 12H5M12 19l-7-7 7-7"></path>
+                    </svg>
+                </div>
+                <span>Return To Studio</span>
+            </a>
+            
+        </div>
+        
+        
+        <div class="absolute inset-0 z-30 pointer-events-none opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+    </main>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Foreground 404 content staggered reveal
+            gsap.from(".error-el", {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.15,
+                ease: "power4.out",
+                delay: 0.4
+            });
+
+            // 3. Subtle continuous floating animation for the massive background text
+            gsap.to(".bg-404", {
+                y: -15,
+                duration: 4,
+                yoyo: true,
+                repeat: -1,
+                ease: "sine.inOut"
+            });
+
+            // 4. Subtle mouse parallax effect for the background text
+            const bgText = document.querySelector('.bg-404');
+            document.addEventListener('mousemove', (e) => {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                
+                gsap.to(bgText, {
+                    x: xAxis,
+                    rotationY: xAxis / 2,
+                    rotationX: yAxis / 2,
+                    duration: 1,
+                    ease: "power1.out"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

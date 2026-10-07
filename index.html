@@ -1,0 +1,3292 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abeiku Edqlics Studio | DMV & Ghana Photographer & Videographer</title>
+    <meta name="description"
+        content="Abeiku Edqlics is a professional photographer and videographer serving the DMV area and Ghana. Specialising in weddings, portraits, corporate events, graduations, and cinematic reels.">
+    <meta name="keywords"
+        content="photographer, videographer, DMV, Ghana, weddings, portraits, corporate events, graduation photography, cinematic reels, Edqlics">
+    <meta property="og:title" content="Abeiku Edqlics Studio | DMV & Ghana Photographer & Videographer">
+    <meta property="og:description"
+        content="Professional photography and videography for weddings, portraits, corporate events and more. Serving the DMV area and Ghana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.edqlics.com/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abeiku Edqlics Studio | DMV & Ghana Photographer & Videographer">
+    <meta name="twitter:description"
+        content="Professional photography and videography for weddings, portraits, corporate events and more. Serving the DMV area and Ghana.">
+
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+ 
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+
+    
+    <script src="./assets/vendor/gsap/gsap.min.js"></script>
+    <script src="./assets/vendor/gsap/Draggable.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="./assets/vendor/lenis/lenis.css">
+    <script src="./assets/vendor/lenis/lenis.min.js"></script>
+
+    
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Satoshi', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#1a1a1a',
+                        textPrimary: '#f4f4f4',
+                        btnBg: '#f2ebdb',
+                        btnIcon: '#ff3333',
+                        jumboOrange: '#ff3333',
+                        douwePink: '#d24a73',
+                        hemaPurple: '#ce63d6',
+                        brandRed: '#ff3333'
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    
+    <style>
+        /* Base reset and fonts */
+
+
+        .font-display {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-weight: 800;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 800;
+        }
+
+        /* Neobrutalist utilities */
+        .sharp-border {
+            border: 1px solid #111;
+        }
+
+        .sharp-border-white {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 767px) {
+            .sharp-border-white {
+                border: none;
+            }
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .noise-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .clip-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        /* Staggering Button text animation */
+        [data-button-animate-chars] {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+        }
+
+        [data-button-animate-chars] span {
+            display: inline-block;
+            position: relative;
+            text-shadow: 0px 1.3em currentColor;
+            transform: translateY(0em) rotate(0.001deg);
+            transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+        }
+
+        a:hover [data-button-animate-chars] span {
+            transform: translateY(-1.3em) rotate(0.001deg);
+        }
+
+        /* Text-only staggering animation for footer links and nav menu items */
+        .footer-link,
+        .nav-menu-item,
+        .nav-social-link {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .footer-link span,
+        .nav-menu-item span,
+        .nav-social-link span {
+            display: inline-block;
+            position: relative;
+            text-shadow: 0px 1.3em currentColor;
+            transform: translateY(0em) rotate(0.001deg);
+            transition: transform 0.5s cubic-bezier(0.625, 0.05, 0, 1);
+        }
+
+        .footer-link:hover span,
+        .nav-menu-item:hover span,
+        .nav-social-link:hover span {
+            transform: translateY(-1.3em) rotate(0.001deg);
+        }
+
+        .bg-slide {
+            will-change: transform, opacity;
+            filter: grayscale(80%) contrast(120%);
+        }
+    </style>
+    <style>
+        /* Inline CSS for specific adjustments Tailwind can't easily handle dynamically */
+        .inline-img {
+            display: inline-block;
+            height: 0.75em;
+            width: 1.25em;
+            object-fit: cover;
+            border-radius: 0.15em;
+            margin: 0 0.1em;
+            transform: translateY(-0.05em);
+        }
+
+        /* Initial state for GSAP animations */
+        .gs-reveal,
+        .gs-grid-item {
+            visibility: hidden;
+        }
+    </style>
+    <style>
+        /* Base Reset & Variables */
+        :root {
+            --bg-color: #1e1b1a;
+            /* Dark warm brown/gray from the video */
+            --text-main: #ffffff;
+            --text-muted: #a3a3a3;
+            --accent-red: #ff3333;
+            --bracket-color: rgba(255, 255, 255, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+            /* Hide default cursor for custom GSAP cursor */
+        }
+
+
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: normal;
+        }
+
+        /* Section Layout */
+        .action-section {
+            padding: 5vw 5vw 3vw;
+            position: relative;
+        }
+
+        /* Header Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 8vw;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+
+            font-weight: 800;
+            letter-spacing: -0.04em;
+
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            font-size: clamp(0.875rem, 1.2vw, 1.5rem);
+            font-weight: 400;
+            color: #d1d1d1;
+        }
+
+        /* Grid / Columns Layout */
+        .projects-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 5vw;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10vw;
+            width: 100%;
+        }
+
+        .column-left {
+            width: 45%;
+            margin-top: 10vw;
+            /* Offset to create asymmetrical look */
+        }
+
+        .column-right {
+            width: 50%;
+        }
+
+        /* Project Card Styles */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Brackets Container */
+        .media-wrapper {
+            position: relative;
+            padding: 12px;
+            /* Space between bracket and image */
+            width: 100%;
+        }
+
+        .bracket {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border: 1px solid var(--bracket-color);
+        }
+
+        .bracket-tl {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .bracket-tr {
+            top: 0;
+            right: 0;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .bracket-bl {
+            bottom: 0;
+            left: 0;
+            border-right: none;
+            border-top: none;
+        }
+
+        .bracket-br {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* Media / Image */
+        .media-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background-color: #111;
+        }
+
+        .media-inner img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            will-change: transform;
+        }
+
+        /* 16:9 Aspect ratio enforcer for some cards */
+        .aspect-video .media-inner {
+            aspect-ratio: 16 / 9;
+        }
+
+        .aspect-video .media-inner img {
+            height: 100%;
+        }
+
+        /* Project Info Footer */
+        .project-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 12px;
+        }
+
+        .project-text h3 {
+            font-size: clamp(1rem, 1.5vw, 2rem);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: #d1d1d1;
+        }
+
+        .project-text p {
+            font-size: clamp(0.6rem, 0.8vw, 1rem);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .action-btn {
+            background-color: var(--accent-red);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .action-btn {
+            transform: scale(1.1);
+        }
+
+        /* Circular Rotating Badge */
+        .rotating-badge {
+            position: absolute;
+            bottom: -5vw;
+            right: 10vw;
+            width: 120px;
+            height: 120px;
+            animation: rotateBadge 10s linear infinite;
+            z-index: 5;
+            color: var(--accent-red);
+        }
+
+        .rotating-badge svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+            letter-spacing: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        @keyframes rotateBadge {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* --- Primary CTA Button (Translated from Tailwind to Standard CSS) --- */
+        .cta-container {
+            display: flex;
+            justify-content: right;
+            margin-top: 4vw;
+            position: relative;
+            z-index: 10;
+        }
+
+        .take-next-step-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-left: 1rem;
+            height: 38px;
+            text-decoration: none;
+            border: 1px solid #111;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .take-next-step-btn:hover {
+            background-color: #e5e7eb;
+        }
+
+        .take-next-step-btn span {
+            margin-right: 1rem;
+        }
+
+        .take-next-step-btn .btn-icon {
+            background-color: #ff3333;
+            height: 100%;
+            padding: 0 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #111;
+            transition: background-color 0.3s ease;
+        }
+
+        .take-next-step-btn:hover .btn-icon {
+            background-color: #e62e2e;
+        }
+
+        .take-next-step-btn svg {
+            width: 14px;
+            height: 14px;
+            color: #ffffff;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .projects-grid {
+                flex-direction: column;
+                gap: 15vw;
+            }
+
+            .column {
+                width: 100% !important;
+                margin-top: 0 !important;
+            }
+
+            /* Show normal cursor on touch devices */
+            * {
+                cursor: auto;
+            }
+
+            .cursor {
+                display: none;
+            }
+        }
+
+        /* Tablet: hide custom cursor and fix spacing */
+        @media (min-width: 769px) and (max-width: 1024px) {
+
+            /* Hide custom cursor on tablet */
+            * {
+                cursor: auto !important;
+            }
+
+            .cursor {
+                display: none !important;
+            }
+
+            /* What We Do grid: tighter aspect ratio on tablet so boxes aren't too tall */
+            .gs-grid-item .aspect-\[4\/5\] {
+                aspect-ratio: 1 / 1;
+            }
+        }
+    </style>
+    <style>
+        /* Base Reset & Variables */
+        :root {
+            --bg-color: #f2f2f2;
+            --text-main: #181818;
+            --text-paragraph: #4a4a4a;
+            --logo-color: #8c8c8c;
+        }
+
+
+
+        /* Typography specific adjustments */
+        .heading-tight {
+            letter-spacing: -0.05em;
+            line-height: 0.95;
+        }
+
+        /* Marquee containers */
+        .marquee-container {
+            overflow: hidden;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            will-change: transform;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            padding-right: 6rem;
+            /* Gap between repeats */
+        }
+
+        /* Logo generic styles */
+        .logo-item {
+            fill: var(--logo-color);
+            color: var(--logo-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+        }
+
+        .logo-item svg {
+            max-height: 100%;
+            width: auto;
+        }
+    </style>
+    <style>
+        /* Initial states to prevent Flash of Unstyled Content (FOUC) */
+        .gs-reveal,
+        .gs-card,
+        .gs-blob,
+        .gs-btn {
+            visibility: hidden;
+        }
+
+        /* Base card styling */
+        .showcase-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 290px;
+            height: 460px;
+            border: 3px solid #ffffff;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #000;
+            /* Allows vertical page scrolling but lets JS handle horizontal swipes */
+            touch-action: pan-y;
+            will-change: transform;
+        }
+
+        @media (min-width: 768px) {
+            .showcase-card {
+                width: 320px;
+                height: 520px;
+            }
+        }
+
+        /* Subtle gradient overlay to ensure text legibility over videos/images */
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 100%);
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 20;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.25rem;
+            pointer-events: none;
+            /* Let drag events pass to the card body */
+        }
+    </style>
+    <style>
+        /* =============================================
+           FLIP CARD SYSTEM
+        ============================================= */
+        .service-card {
+            perspective: 1200px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 0.5rem;
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem 1.5rem;
+            gap: 1rem;
+        }
+
+        /* Mobile Stacking Visual Enhancements */
+        @media (max-width: 767px) {
+            .service-card {
+                will-change: transform;
+                transform-origin: center bottom;
+                box-shadow: 0 -8px 30px -10px rgba(0, 0, 0, 0.35);
+            }
+
+            /* On mobile tap activates flip */
+            .service-card.flipped .card-inner {
+                transform: rotateY(180deg);
+            }
+        }
+
+        /* Desktop & Tablet: Horizontal Layout & Flip on Hover */
+        @media (min-width: 768px) {
+            .scroll-container {
+                cursor: grab;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .scroll-container.is-dragging {
+                cursor: grabbing;
+            }
+
+            .scroll-container.is-dragging .service-card {
+                pointer-events: none;
+            }
+
+            .scroll-container::-webkit-scrollbar {
+                height: 6px;
+            }
+
+            .scroll-container::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                margin: 0 35vw;
+            }
+
+            .scroll-container::-webkit-scrollbar-thumb {
+                background: #ff3333;
+                border-radius: 10px;
+            }
+
+            .service-card {
+                transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+                will-change: transform;
+            }
+
+            /* Flip on hover - desktop only */
+            .service-card:hover .card-inner {
+                transform: rotateY(180deg);
+            }
+
+            /* Playful tilts - scoped to service cards only */
+            .service-card.card-1 {
+                transform: rotate(-3deg);
+                z-index: 10;
+            }
+
+            .service-card.card-2 {
+                transform: rotate(2deg);
+                z-index: 15;
+            }
+
+            .service-card.card-3 {
+                transform: rotate(-2deg);
+                z-index: 20;
+            }
+
+            .service-card.card-4 {
+                transform: rotate(3deg);
+                z-index: 25;
+            }
+
+            .service-card.card-5 {
+                transform: rotate(-1deg);
+                z-index: 30;
+            }
+
+            .service-card.card-6 {
+                transform: rotate(2deg);
+                z-index: 35;
+            }
+
+            .service-card.card-7 {
+                transform: rotate(-2deg);
+                z-index: 40;
+            }
+
+            .service-card:hover {
+                transform: scale(1.06) rotate(0deg) translateY(-10px) !important;
+                z-index: 50 !important;
+                box-shadow: 0 24px 40px -10px rgba(0, 0, 0, 0.35);
+            }
+        }
+    </style>
+    <style>
+        .testimonial-slide {
+            will-change: transform, opacity;
+        }
+
+        /* Subtle button hover transition */
+        .nav-btn {
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-color: #a0a0a0;
+        }
+    </style>
+    <style>
+        .font-display {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        /* Neobrutalist utilities */
+        .sharp-border {
+            border: 1px solid #333;
+        }
+
+        /* Typography tweaks for massive headers */
+        .tracking-tighter-custom {
+            letter-spacing: -0.04em;
+        }
+
+        /* Masking for GSAP text reveals */
+        .clip-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .word-wrapper {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        .word {
+            display: inline-block;
+            will-change: transform;
+        }
+    </style>
+    <style>
+        .font-display {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        /* 15px Rounded Border Sections */
+        .rounded-section {
+            border-radius: 0.5rem;
+        }
+
+        /* Brutalist Box Shadow Hover with Red */
+        .brutalist-shadow-hover:hover {
+            box-shadow: 4px 4px 0px 0px #ff3333;
+            transform: translate(-2px, -2px);
+        }
+
+        /* Custom link red hover */
+        .footer-link {
+            position: relative;
+            display: inline-block;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: #ff3333;
+        }
+
+        /* Image Styles */
+        .zoomable {
+            border-radius: 0.5rem;
+            cursor: zoom-in;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            will-change: opacity;
+        }
+
+        /* Overlay */
+        .zoom-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(24, 24, 24, 0.96);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+            cursor: zoom-out;
+        }
+
+        .zoom-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Cloned Image */
+        .zoom-clone {
+            object-fit: cover;
+            will-change: transform, width, height, top, left, border-radius;
+            cursor: zoom-out;
+            z-index: 101;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body class="antialiased overflow-x-hidden bg-black overscroll-none">
+    <section class="text-white antialiased overflow-x-hidden" data-section='1Hero section new.html'
+        data-navbar-theme="dark">
+
+
+        
+        
+<nav id="main-nav"
+            class="fixed top-0 w-full z-50 px-6 py-4 md:py-6 flex flex-row items-center justify-between transition-transform duration-300">
+
+            
+            <div
+                class="nav-item text-white font-display text-2xl tracking-tighter uppercase whitespace-nowrap drop-shadow-md">
+                <a href="./index.html" class="inline-block cursor-pointer">
+                    <img loading="lazy" id="nav-logo" src="./assets/logo/logo.png" alt="Abeiku Edqlics"
+                        class="h-10 md:h-12 w-auto object-contain transition-all duration-500">
+                </a>
+            </div>
+
+            
+            <div class="nav-item flex items-center gap-2 max-w-full relative z-50">
+                
+                <div class="relative w-[38px] h-[38px]">
+                    <div id="nav-container"
+                        class="absolute top-0 right-0 bg-white sharp-border overflow-hidden w-[38px] h-[38px] transition-shadow z-50">
+                        
+                        <button id="nav-toggle"
+                            class="absolute top-0 right-0 w-[38px] h-[38px] bg-white border border-black hover:bg-gray-200 transition-colors flex items-center justify-center text-black outline-none z-20">
+                            <div id="icon-menu"
+                                class="absolute inset-0 flex flex-col items-center justify-center gap-[3px]">
+                                <div class="w-[14px] h-[1.5px] bg-black"></div>
+                                <div class="w-[14px] h-[1.5px] bg-black"></div>
+                            </div>
+                            <div id="icon-close"
+                                class="absolute inset-0 flex items-center justify-center opacity-0 scale-50 -rotate-90">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                        </button>
+                        
+                        <div id="nav-content"
+                            class="absolute top-[38px] left-0 w-[280px] px-6 pb-6 pt-4 flex flex-col opacity-0 pointer-events-none z-10">
+                            <nav class="flex flex-col gap-2 text-xl font-bold tracking-tight text-black mt-2">
+                                <div class="overflow-hidden py-1"><a href="./index.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>Home</span></a>
+                                </div>
+                                <div class="overflow-hidden py-1"><a href="./Projects.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>Work</span></a>
+                                </div>
+                                <div class="overflow-hidden py-1"><a href="./AboutUs.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>About</span></a>
+                                </div>
+                                <div class="overflow-hidden py-1"><a href="./contact.html"
+                                        class="nav-menu-item block transition-colors hover:text-[#ff3333]"><span>Contact</span></a>
+                                </div>
+                            </nav>
+                            <a href="https://wa.me/233247154587" target="_blank"
+                                class="md:hidden mt-4 bg-[#ff3333] flex items-center justify-center sharp-border hover:bg-[#e62e2e] transition-colors h-[38px] w-[38px] group border border-[#111]">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.031 21.085c-1.637 0-3.238-.43-4.652-1.246l-5.176 1.357 1.385-5.045a9.012 9.012 0 0 1-1.282-4.664c0-4.996 4.065-9.062 9.061-9.062 4.997 0 9.062 4.066 9.062 9.062 0 4.997-4.065 9.061-9.062 9.061h-.664v-.463ZM12 4.962C8.106 4.962 4.94 8.128 4.94 12.022c0 1.547.493 3.033 1.42 4.225l-.83 3.024 3.095-.812a7.042 7.042 0 0 0 3.375.856c3.894 0 7.06-3.166 7.06-7.06 0-3.894-3.166-7.06-7.06-7.06v.767h.767v-.767ZM15.42 13.918c-.187-.094-1.11-.548-1.282-.61-.173-.063-.298-.094-.423.094-.125.187-.484.61-.594.734-.11.125-.218.14-.406.047-.187-.094-.791-.292-1.507-.93-.556-.495-.932-1.107-1.041-1.295-.11-.188-.012-.29.082-.383.084-.083.187-.218.28-.328.094-.11.125-.187.187-.312.063-.125.032-.234-.015-.328-.047-.094-.423-1.02-.579-1.398-.152-.367-.306-.317-.423-.323-.11-.005-.234-.005-.36-.005-.125 0-.328.047-.5.234-.173.188-.656.64-.656 1.56s.672 1.81.766 1.936c.094.125 1.32 2.013 3.197 2.823.447.193.796.308 1.069.394.45.143.86.123 1.183.075.362-.054 1.11-.453 1.266-.89.157-.438.157-.813.11-.89-.047-.078-.173-.125-.36-.219Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <a href="https://wa.me/233247154587" target="_blank"
+                    class="hidden md:flex bg-[#ff3333] hover:bg-[#e62e2e] items-center justify-center sharp-border transition-colors h-[38px] w-[38px] group border border-[#111]">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.031 21.085c-1.637 0-3.238-.43-4.652-1.246l-5.176 1.357 1.385-5.045a9.012 9.012 0 0 1-1.282-4.664c0-4.996 4.065-9.062 9.061-9.062 4.997 0 9.062 4.066 9.062 9.062 0 4.997-4.065 9.061-9.062 9.061h-.664v-.463ZM12 4.962C8.106 4.962 4.94 8.128 4.94 12.022c0 1.547.493 3.033 1.42 4.225l-.83 3.024 3.095-.812a7.042 7.042 0 0 0 3.375.856c3.894 0 7.06-3.166 7.06-7.06 0-3.894-3.166-7.06-7.06-7.06v.767h.767v-.767ZM15.42 13.918c-.187-.094-1.11-.548-1.282-.61-.173-.063-.298-.094-.423.094-.125.187-.484.61-.594.734-.11.125-.218.14-.406.047-.187-.094-.791-.292-1.507-.93-.556-.495-.932-1.107-1.041-1.295-.11-.188-.012-.29.082-.383.084-.083.187-.218.28-.328.094-.11.125-.187.187-.312.063-.125.032-.234-.015-.328-.047-.094-.423-1.02-.579-1.398-.152-.367-.306-.317-.423-.323-.11-.005-.234-.005-.36-.005-.125 0-.328.047-.5.234-.173.188-.656.64-.656 1.56s.672 1.81.766 1.936c.094.125 1.32 2.013 3.197 2.823.447.193.796.308 1.069.394.45.143.86.123 1.183.075.362-.054 1.11-.453 1.266-.89.157-.438.157-.813.11-.89-.047-.078-.173-.125-.36-.219Z"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+        
+        <section class="relative w-full h-screen overflow-hidden">
+
+            
+            <div class="relative w-full h-full lg:rounded-[0.5rem] overflow-hidden bg-black">
+
+                
+                <div id="bg-container" class="absolute inset-0 z-0">
+                    <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-100 transform-gpu will-change-[transform,opacity]"
+                        style="background-image: url('./assets/images/CorperateEvents/webp/imgi_98_0938624a-fcb2-46a6-8fbf-0514ce7a6326_rw_3840.webp')">
+                    </div>
+                    <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transform-gpu will-change-[transform,opacity]"
+                        style="background-image: url('./assets/images/Graduation/webp/imgi_11_14bd7819-2eb2-40ec-bfb4-3ba368eceaaf_rw_1200.webp')">
+                    </div>
+                    <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transform-gpu will-change-[transform,opacity]"
+                        style="background-image: url('./assets/images/Weddings/webp/imgi_12_9e9401b9-728e-48e2-9ba2-a917276e4147.webp')">
+                    </div>
+                    <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transform-gpu will-change-[transform,opacity]"
+                        style="background-image: url('./assets/images/potraits/webp/imgi_11_21b32584-59b5-49e1-aa71-18a0dfa23a43_rw_1920.webp')">
+                    </div>
+                    <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transform-gpu will-change-[transform,opacity]"
+                        style="background-image: url('./assets/images/HeadshotLongue/webp/imgi_9_ad167976-54b0-4494-acc6-37112283eb69.webp')">
+                    </div>
+                    <div class="bg-slide absolute inset-0 bg-cover bg-center opacity-0 transform-gpu will-change-[transform,opacity]"
+                        style="background-image: url('./assets/images/foods/webp/imgi_12_02231880-4997-450a-9186-991b3afee7bc.webp')">
+                    </div>
+                </div>
+
+                
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+                
+                
+                <div
+                    class="relative z-20 flex flex-col items-center justify-end h-full pb-12 md:pb-16 px-6 text-center text-white w-full max-w-5xl mx-auto">
+
+                    
+                    <h1
+                        class="hero-text font-display text-[2.25rem] md:text-[3rem] lg:text-[4rem] leading-[1.1] tracking-tighter uppercase mb-6 drop-shadow-xl">
+                        We Frame <br /> Your Story Forever.
+                    </h1>
+
+                    
+                    <div class="hero-thumb-container flex justify-center flex-wrap gap-4 mb-6">
+                        
+                        <button
+                            class="thumb-btn rounded-xl overflow-hidden relative w-14 h-14 md:w-16 md:h-16 bg-black border-[3px] border-[#ff3333] focus:outline-none transition-colors"
+                            data-index="0">
+                            <img loading="lazy"
+                                src="./assets/images/CorperateEvents/webp/imgi_98_0938624a-fcb2-46a6-8fbf-0514ce7a6326_rw_3840.webp"
+                                alt="Thumbnail 1"
+                                class="w-full h-full object-cover pointer-events-none opacity-80 hover:opacity-100 transition-opacity">
+                        </button>
+                        <button
+                            class="thumb-btn rounded-xl overflow-hidden relative w-14 h-14 md:w-16 md:h-16 bg-black border-[3px] border-transparent sharp-border-white focus:outline-none transition-colors"
+                            data-index="1">
+                            <img loading="lazy"
+                                src="./assets/images/Graduation/webp/imgi_11_14bd7819-2eb2-40ec-bfb4-3ba368eceaaf_rw_1200.webp"
+                                alt="Thumbnail 2"
+                                class="w-full h-full object-cover pointer-events-none opacity-50 hover:opacity-100 transition-opacity">
+                        </button>
+                        <button
+                            class="thumb-btn rounded-xl overflow-hidden relative w-14 h-14 md:w-16 md:h-16 bg-black border-[3px] border-transparent sharp-border-white focus:outline-none transition-colors"
+                            data-index="2">
+                            <img loading="lazy"
+                                src="./assets/images/Weddings/webp/imgi_12_9e9401b9-728e-48e2-9ba2-a917276e4147.webp"
+                                alt="Thumbnail 3"
+                                class="w-full h-full object-cover pointer-events-none opacity-50 hover:opacity-100 transition-opacity">
+                        </button>
+                        <button
+                            class="thumb-btn rounded-xl overflow-hidden relative w-14 h-14 md:w-16 md:h-16 bg-black border-[3px] border-transparent sharp-border-white focus:outline-none transition-colors"
+                            data-index="3">
+                            <img loading="lazy"
+                                src="./assets/images/potraits/webp/imgi_11_21b32584-59b5-49e1-aa71-18a0dfa23a43_rw_1920.webp"
+                                alt="Thumbnail 4"
+                                class="w-full h-full object-cover pointer-events-none opacity-50 hover:opacity-100 transition-opacity">
+                        </button>
+                        <button
+                            class="thumb-btn hidden md:block rounded-xl overflow-hidden relative w-14 h-14 md:w-16 md:h-16 bg-black border-[3px] border-transparent sharp-border-white focus:outline-none transition-colors"
+                            data-index="4">
+                            <img loading="lazy"
+                                src="./assets/images/HeadshotLongue/webp/imgi_9_ad167976-54b0-4494-acc6-37112283eb69.webp"
+                                alt="Thumbnail 5"
+                                class="w-full h-full object-cover pointer-events-none opacity-50 hover:opacity-100 transition-opacity">
+                        </button>
+                        <button
+                            class="thumb-btn hidden md:block rounded-xl overflow-hidden relative w-14 h-14 md:w-16 md:h-16 bg-black border-[3px] border-transparent sharp-border-white focus:outline-none transition-colors"
+                            data-index="5">
+                            <img loading="lazy"
+                                src="./assets/images/foods/webp/imgi_12_02231880-4997-450a-9186-991b3afee7bc.webp"
+                                alt="Thumbnail 6"
+                                class="w-full h-full object-cover pointer-events-none opacity-50 hover:opacity-100 transition-opacity">
+                        </button>
+                    </div>
+
+                    
+                    <p
+                        class="hero-paragraph max-w-2xl text-lg lg:text-xl font-medium tracking-wide text-gray-300 leading-relaxed">
+                        Capturing the vibrant energy of every milestone, we deliver premium photography, cinematic
+                        videography, and live streaming across Ghana and the USA.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // --- 1. NAVBAR LOGIC ---
+                gsap.from(".nav-item", {
+                    y: -20,
+                    opacity: 0,
+                    duration: 0.7,
+                    stagger: 0.1,
+                    ease: "power4.out",
+                    delay: 0.2
+                });
+
+                // Hamburger Menu Logic
+                const navTl = gsap.timeline({
+                    paused: true,
+                    reversed: true,
+                    defaults: { ease: "power3.inOut" }
+                });
+
+                navTl.to("#nav-container", {
+                    width: 280,
+                    height: 280,
+                    duration: 0.5
+                }, 0);
+
+                navTl.to("#icon-menu", {
+                    opacity: 0, scale: 0.5, rotation: 90, duration: 0.3
+                }, 0);
+
+                navTl.to("#icon-close", {
+                    opacity: 1, scale: 1, rotation: 0, duration: 0.3
+                }, 0.1);
+
+                navTl.to("#nav-content", {
+                    opacity: 1, pointerEvents: "auto", duration: 0.1
+                }, 0.15);
+
+                navTl.from(".nav-menu-item", {
+                    y: 15, opacity: 0, duration: 0.3, stagger: 0.05, ease: "power4.out"
+                }, 0.2);
+
+                navTl.from(".nav-footer", {
+                    y: 10, opacity: 0, duration: 0.3, ease: "power3.out"
+                }, 0.3);
+
+                const toggleBtn = document.getElementById('nav-toggle');
+                const navWrapper = document.querySelector('.relative.w-\\[38px\\].h-\\[38px\\]');
+
+                function closeNav() {
+                    if (!navTl.reversed()) {
+                        navTl.timeScale(1.5).reverse();
+                    }
+                }
+
+                toggleBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navTl.reversed() ? navTl.timeScale(1).play() : navTl.timeScale(1.5).reverse();
+                });
+
+                // Close on click outside
+                document.addEventListener('click', (e) => {
+                    const navContainer = document.getElementById('nav-container');
+                    if (navContainer && !navContainer.contains(e.target)) {
+                        closeNav();
+                    }
+                });
+
+                // Close on scroll
+                window.addEventListener('scroll', () => {
+                    closeNav();
+                }, { passive: true });
+
+                // --- 2. HERO CAROUSEL LOGIC ---
+                const slides = document.querySelectorAll('.bg-slide');
+                const thumbs = document.querySelectorAll('.thumb-btn');
+                const AUTOPLAY_DURATION = 5;
+
+                let currentIndex = 0;
+                let isAnimating = false;
+                let autoplayTimer;
+
+                // Initial Hero Load Animations
+                gsap.set(slides, { opacity: 0, scale: 1.05 });
+                gsap.set(slides[0], { opacity: 1, scale: 1 });
+
+                // Staggered text & layout sequence
+                const heroTl = gsap.timeline({ delay: 0.6 });
+                heroTl.from(".hero-text", {
+                    y: 30, opacity: 0, duration: 1, ease: "power4.out"
+                })
+                    .from(".hero-thumb-container .thumb-btn", {
+                        y: 20, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power3.out"
+                    }, "-=0.6")
+                    .from(".hero-paragraph", {
+                        y: 20, opacity: 0, duration: 0.8, ease: "power3.out",
+                        onComplete: startAutoplay
+                    }, "-=0.4");
+
+                // Thumbnail Micro-interactions
+                thumbs.forEach((thumb, index) => {
+                    thumb.addEventListener('mouseenter', () => {
+                        if (currentIndex !== index) {
+                            gsap.to(thumb, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+                            gsap.to(thumb.querySelector('img'), { opacity: 0.8, duration: 0.3 });
+                        }
+                    });
+
+                    thumb.addEventListener('mouseleave', () => {
+                        if (currentIndex !== index) {
+                            gsap.to(thumb, { scale: 1, duration: 0.3, ease: "power2.out" });
+                            gsap.to(thumb.querySelector('img'), { opacity: 0.5, duration: 0.3 });
+                        }
+                    });
+
+                    thumb.addEventListener('click', () => {
+                        if (isAnimating || currentIndex === index) return;
+                        goToSlide(index);
+                    });
+                });
+
+                // Returns how many slides are active based on screen width
+                function getSlideCount() {
+                    return window.innerWidth < 768 ? 4 : slides.length;
+                }
+
+                // Autoplay Logic
+                function startAutoplay() {
+                    if (autoplayTimer) autoplayTimer.kill();
+                    autoplayTimer = gsap.delayedCall(AUTOPLAY_DURATION, () => {
+                        const nextIndex = (currentIndex + 1) % getSlideCount();
+                        goToSlide(nextIndex);
+                    });
+                }
+
+                // Main Carousel Transition
+                function goToSlide(index) {
+                    isAnimating = true;
+                    if (autoplayTimer) autoplayTimer.kill();
+
+                    const currentSlide = slides[currentIndex];
+                    const nextSlide = slides[index];
+                    const currentThumb = thumbs[currentIndex];
+                    const nextThumb = thumbs[index];
+
+                    gsap.to(currentThumb, { scale: 1, duration: 0.3 });
+                    gsap.to(nextThumb, { scale: 1, duration: 0.3 });
+
+                    currentThumb.classList.remove('border-[#ff3333]');
+                    currentThumb.classList.add('border-transparent', 'sharp-border-white');
+                    gsap.to(currentThumb.querySelector('img'), { opacity: 0.5, duration: 0.3 });
+
+                    nextThumb.classList.remove('border-transparent', 'sharp-border-white');
+                    nextThumb.classList.add('border-[#ff3333]');
+                    gsap.to(nextThumb.querySelector('img'), { opacity: 0.8, duration: 0.3 });
+
+                    const tl = gsap.timeline({
+                        onComplete: () => {
+                            currentIndex = index;
+                            isAnimating = false;
+                            startAutoplay();
+                        }
+                    });
+
+                    gsap.set(nextSlide, { zIndex: 1, scale: 1.05 });
+                    gsap.set(currentSlide, { zIndex: 0 });
+
+                    tl.to(currentSlide, {
+                        opacity: 0,
+                        duration: 1.2,
+                        ease: "power2.inOut"
+                    }, 0);
+
+                    tl.to(nextSlide, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 1.2,
+                        ease: "power2.out"
+                    }, 0);
+                }
+            });
+        </script>
+
+    </section>
+    <section
+        class="bg-white text-black font-sans py-16 md:py-12 lg:py-16 px-6 md:px-12 flex flex-col items-center selection:bg-btnIcon selection:text-white"
+        data-section='2whatwedo.html' data-navbar-theme="light">
+
+
+        
+        <main class="max-w-[70rem] mx-auto w-full flex flex-col items-center">
+
+            
+            <h1
+                class="gs-reveal text-[2.25rem] md:text-[3rem] lg:text-[4rem] font-black text-center tracking-tighter leading-[1.1] max-w-6xl">
+                From standout creatives <br>
+                to everyday teams,
+                we capture <br>
+                the people, culture,
+                and products <br> that have a visual
+                story <br> to tell
+                all around the world.
+            </h1>
+
+            
+            <p
+                class="gs-reveal mt-8 md:mt-12 text-lg lg:text-xl text-gray-600 max-w-[48rem] mx-auto text-center font-medium leading-snug tracking-tight">
+                We Capture the vibrant energy of events, weddings, and milestones
+                across the globe with both photography and cinematic videography.
+            </p>
+
+            
+            <div class="mt-16 md:mt-16 lg:mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full">
+
+                
+                <div class="gs-grid-item flex flex-col gap-3 group cursor-pointer">
+                    <div class="overflow-hidden bg-gray-800 aspect-[4/5] md:aspect-square">
+                        <img loading="lazy"
+                            src="./assets/images/box/imgi_43_aa67c49a-6c71-4dcf-a450-7777fc4274dd_rw_3840.webp"
+                            alt="Graduation"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                    </div>
+                </div>
+
+                
+                <div class="gs-grid-item flex flex-col gap-3 group cursor-pointer">
+                    <div class="overflow-hidden bg-gray-800 aspect-[4/5] md:aspect-square">
+                        <img loading="lazy"
+                            src="./assets/images/box/imgi_201_91bca45e-b030-4213-acba-cbbd900ec8a0_rw_3840.webp"
+                            alt="corporate"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                    </div>
+                </div>
+
+                
+                <div class="gs-grid-item flex flex-col gap-3 group cursor-pointer">
+                    <div class="overflow-hidden bg-gray-800 aspect-[4/5] md:aspect-square">
+                        <img loading="lazy" src="./assets/images/box/imgi_24_04dd5926-6738-486c-83a3-46818b373584.png"
+                            alt="Wedding"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                    </div>
+                </div>
+
+                
+                <div class="gs-grid-item flex flex-col gap-3 group cursor-pointer">
+                    <div class="overflow-hidden bg-gray-800 aspect-[4/5] md:aspect-square">
+                        <img loading="lazy"
+                            src="./assets/images/box/imgi_8_c7ab4b32-34d6-4336-9a8c-0d5920c91a8b_rw_3840.webp"
+                            alt="Portrait"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                // Prevent Flash of Unstyled Content (FOUC) by setting autoAlpha
+                gsap.set(".gs-reveal, .gs-grid-item", { autoAlpha: 1 });
+
+                const tl = gsap.timeline();
+
+                // Animate Hero Elements (Headline, Paragraph, Button)
+                tl.fromTo(".gs-reveal",
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        stagger: 0.2,
+                        ease: "power4.out",
+                        delay: 0.2
+                    }
+                );
+
+                // Animate Grid Items sequentially
+                tl.fromTo(".gs-grid-item",
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.15,
+                        ease: "power3.out"
+                    },
+                    "-=0.6" // Overlap with previous animation for a smoother flow
+                );
+            });
+        </script>
+
+    </section>
+    <section data-section='3see it in action.html' data-navbar-theme="dark">
+
+
+        
+        <div class="cursor"></div>
+
+        <section class="action-section pt-24 md:pt-32">
+            <header class="section-header">
+                <h1
+                    class="section-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-bold leading-[1.1] text-white">
+                    Featured
+                    Projects.</h1>
+                <p class="section-subtitle">Dive into a collection of our visual stories</p>
+            </header>
+
+            <div class="projects-grid">
+
+                
+                <div class="column column-left">
+
+                    
+                    <article class="project-card parallax-item" data-speed="0.1">
+                        <div class="media-wrapper">
+                            <div class="bracket bracket-tl"></div>
+                            <div class="bracket bracket-tr"></div>
+                            <div class="bracket bracket-bl"></div>
+                            <div class="bracket bracket-br"></div>
+                            <div class="media-inner">
+                                <img loading="lazy"
+                                    src="./assets/images/Graduation/webp/imgi_43_aa67c49a-6c71-4dcf-a450-7777fc4274dd_rw_3840.webp"
+                                    alt="School Graduation" class="img-parallax zoomable">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="text-2xl lg:text-3xl font-bold">Graduation</h3>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="project-card parallax-item aspect-video" data-speed="0.15">
+                        <div class="media-wrapper">
+                            <div class="bracket bracket-tl"></div>
+                            <div class="bracket bracket-tr"></div>
+                            <div class="bracket bracket-bl"></div>
+                            <div class="bracket bracket-br"></div>
+                            <div class="media-inner">
+                                <img loading="lazy"
+                                    src="./assets/images/Weddings/webp/imgi_52_4d66244f-684a-420c-9173-441b965001fc.webp"
+                                    alt="Church Wedding" class="img-parallax zoomable">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="text-2xl lg:text-3xl font-bold">Weddings</h3>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="project-card parallax-item aspect-video" data-speed="0.15">
+                        <div class="media-wrapper">
+                            <div class="bracket bracket-tl"></div>
+                            <div class="bracket bracket-tr"></div>
+                            <div class="bracket bracket-bl"></div>
+                            <div class="bracket bracket-br"></div>
+                            <div class="media-inner">
+                                <img loading="lazy"
+                                    src="./assets/images/potraits/webp/imgi_7_1a360a09-e90f-4b8e-88ad-97e61820fa48_rw_3840.webp"
+                                    alt="Portraits" class="img-parallax zoomable">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="text-2xl lg:text-3xl font-bold">Outdoor Portraits</h3>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                
+                <div class="column column-right">
+
+                    
+                    <article class="project-card parallax-item aspect-video" data-speed="0.1">
+                        <div class="media-wrapper">
+                            <div class="bracket bracket-tl"></div>
+                            <div class="bracket bracket-tr"></div>
+                            <div class="bracket bracket-bl"></div>
+                            <div class="bracket bracket-br"></div>
+                            <div class="media-inner">
+                                <img loading="lazy"
+                                    src="./assets/images/CorperateEvents/webp/imgi_173_e81043a8-6fa9-4493-9e10-485ba19dc4b3_rw_3840.webp"
+                                    alt="Corporate Events" class="img-parallax zoomable">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="text-2xl lg:text-3xl font-bold">Corporate Meetings</h3>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="project-card parallax-item aspect-video" data-speed="-0.05">
+                        <div class="media-wrapper">
+                            <div class="bracket bracket-tl"></div>
+                            <div class="bracket bracket-tr"></div>
+                            <div class="bracket bracket-bl"></div>
+                            <div class="bracket bracket-br"></div>
+                            <div class="media-inner">
+                                <img loading="lazy"
+                                    src="./assets/images/foods/webp/imgi_13_9f6f9049-dcc9-48d4-8ba8-a537a8d68338.webp"
+                                    alt="Food Photography" class="img-parallax zoomable">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="text-2xl lg:text-3xl font-bold">Food Photography</h3>
+                            </div>
+                        </div>
+
+                        
+                        <div class="rotating-badge">
+                            <svg viewBox="0 0 100 100">
+                                <path id="circlePath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
+                                    fill="none" />
+                                <text>
+                                    <textPath href="#circlePath" startOffset="0%">
+                                        CREATED WITH INTENTION •
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                    </article>
+
+                    
+                    <article class="project-card parallax-item" data-speed="-0.1">
+                        <div class="media-wrapper">
+                            <div class="bracket bracket-tl"></div>
+                            <div class="bracket bracket-tr"></div>
+                            <div class="bracket bracket-bl"></div>
+                            <div class="bracket bracket-br"></div>
+                            <div class="media-inner">
+                                <img loading="lazy"
+                                    src="./assets/images/HeadshotLongue/webp/imgi_3_96ced457-896b-41cc-8651-b1196d474be3_rw_3840.webp"
+                                    alt="HeadshotLongue" class="img-parallax zoomable">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-text">
+                                <h3 class="text-2xl lg:text-3xl font-bold">HeadshotLongue</h3>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            
+            <div class="cta-container">
+                <a href="./Projects.html"
+                    class="bg-white text-black text-[9px] font-bold uppercase tracking-[0.2em] pl-4 flex items-center sharp-border hover:bg-gray-200 transition-colors whitespace-nowrap h-[38px] group w-fit">
+                    <span data-button-animate-chars class="mr-4 overflow-hidden relative inline-block">VIEW MORE</span>
+                    <div
+                        class="bg-[#ff3333] h-full px-3 flex items-center justify-center border-l border-[#111] group-hover:bg-[#e62e2e] transition-colors">
+                        <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="square" stroke-linejoin="miter" d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // 1. Custom Cursor Logic
+                const cursor = document.querySelector('.cursor');
+
+                // Initial hide check for touch devices
+                if (window.matchMedia("(pointer: fine)").matches) {
+                    window.addEventListener('mousemove', (e) => {
+                        gsap.to(cursor, {
+                            x: e.clientX,
+                            y: e.clientY,
+                            duration: 0.1,
+                            ease: "power2.out"
+                        });
+                    });
+
+                    // Hover effects for the cursor over interactive elements
+                    const interactables = document.querySelectorAll('button, .project-card');
+                    interactables.forEach(el => {
+                        el.addEventListener('mouseenter', () => {
+                            gsap.to(cursor, { scale: 1.5, duration: 0.2 });
+                        });
+                        el.addEventListener('mouseleave', () => {
+                            gsap.to(cursor, { scale: 1, duration: 0.2 });
+                        });
+                    });
+                }
+
+                // 2. Structural Parallax for the Cards Layout
+                // Moves the entire card based on its data-speed attribute
+                const parallaxItems = document.querySelectorAll('.parallax-item');
+
+                parallaxItems.forEach(item => {
+                    const speed = parseFloat(item.getAttribute('data-speed'));
+
+                    gsap.to(item, {
+                        yPercent: speed * 100, // Move item vertically based on speed
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: true
+                        }
+                    });
+                });
+
+                // 3. Inner Image Parallax 
+                // Gives the images a slight scaling/movement effect within their frames
+                const imageWrappers = document.querySelectorAll('.media-inner');
+
+                imageWrappers.forEach(wrapper => {
+                    const img = wrapper.querySelector('.img-parallax');
+
+                    // Set initial scale to allow room for parallax movement
+                    gsap.set(img, { scale: 1.15, yPercent: -5 });
+
+                    gsap.to(img, {
+                        yPercent: 5,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: wrapper,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: true
+                        }
+                    });
+                });
+            });
+        </script>
+
+    </section>
+    <section data-section='4people weve worked with.html' data-navbar-theme="light">
+
+
+        
+        <div class="h-32 w-full"></div>
+
+        <section class="py-20 bg-white text-black">
+            <div class="container px-10 mb-24 max-w-7xl">
+                
+                <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] font-bold heading-tight mb-8">
+                    In good<br>company.
+                </h1>
+
+                
+                <p class="text-lg md:text-xl text-[var(--text-paragraph)] max-w-2xl leading-relaxed">
+                    Big or small, local or international, we bring the same level of care to every
+                    project. We love working with teams that value honest, human connection.
+                </p>
+            </div>
+
+            
+            <div class="flex flex-col gap-16 md:gap-24 w-full pt-10 pb-20">
+
+                
+                <div class="marquee-container">
+                    <div class="marquee-track marquee-top">
+                        
+                        <div class="marquee-content gap-16 md:gap-24">
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/accra aca.png" alt="Accra Aca"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/achimota.png" alt="Achimota"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/adisco.png" alt="Adisco"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/mfantsipm.png" alt="mfantsipm"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/holychild.png" alt="Holychild"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st louis.png" alt="St Louis"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st. merries.png" alt="St"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/wesly girls.png" alt="Wesly Girls"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/presec.png" alt="presec"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/choco sarayi.png" alt="choco sarayi"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/MEF.webp" alt="MEF"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                        </div>
+
+                        
+                        <div class="marquee-content gap-16 md:gap-24">
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/accra aca.png" alt="Accra Aca"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/achimota.png" alt="Achimota"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/adisco.png" alt="Adisco"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/mfantsipm.png" alt="mfantsipm"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/holychild.png" alt="Holychild"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st louis.png" alt="St Louis"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st. merries.png" alt="St"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/wesly girls.png" alt="Wesly Girls"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/presec.png" alt="presec"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/choco sarayi.png" alt="choco sarayi"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/MEF.webp" alt="MEF"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="marquee-container">
+                    <div class="marquee-track marquee-bottom">
+                        
+                        <div class="marquee-content gap-16 md:gap-24">
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/MEF.webp" alt="MEF"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/choco sarayi.png" alt="choco sarayi"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/presec.png" alt="presec"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/holychild.png" alt="Holychild"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st louis.png" alt="St Louis"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st. merries.png" alt="St"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/wesly girls.png" alt="Wesly Girls"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/accra aca.png" alt="Accra Aca"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/achimota.png" alt="Achimota"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/adisco.png" alt="Adisco"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/mfantsipm.png" alt="mfantsipm"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                        </div>
+
+                        
+                        <div class="marquee-content gap-16 md:gap-24">
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/MEF.webp" alt="MEF"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/choco sarayi.png" alt="choco sarayi"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/presec.png" alt="presec"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/holychild.png" alt="Holychild"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st louis.png" alt="St Louis"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/st. merries.png" alt="St"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/wesly girls.png" alt="Wesly Girls"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/accra aca.png" alt="Accra Aca"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/achimota.png" alt="Achimota"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/adisco.png" alt="Adisco"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                            <div class="logo-item">
+                                <img loading="lazy" src="./assets/school logos/mfantsipm.png" alt="mfantsipm"
+                                    class="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const marqueeTop = document.querySelector('.marquee-top');
+                const marqueeBottom = document.querySelector('.marquee-bottom');
+
+                // Set up infinite loops.
+                // Moving left: xPercent from 0 to -50 (since content is duplicated once)
+                const topTween = gsap.to(marqueeTop, {
+                    xPercent: -50,
+                    repeat: -1,
+                    duration: 25, // Adjust for speed
+                    ease: "none"
+                });
+
+                // Moving right: xPercent from -50 to 0
+                const bottomTween = gsap.fromTo(marqueeBottom, {
+                    xPercent: -50
+                }, {
+                    xPercent: 0,
+                    repeat: -1,
+                    duration: 25, // Adjust for speed
+                    ease: "none"
+                });
+
+                // Variable to keep track of current scroll direction
+                let currentDirection = 1;
+
+                // ScrollTrigger to detect direction and reverse the timeScale smoothly
+                ScrollTrigger.create({
+                    trigger: document.body,
+                    start: "top top",
+                    end: "bottom bottom",
+                    onUpdate: (self) => {
+                        // self.direction returns 1 for scrolling down, -1 for scrolling up
+                        if (self.direction !== currentDirection) {
+                            currentDirection = self.direction;
+
+                            // Smoothly tween the timeScale of both tweens
+                            // When scrolling down (1): top moves left, bottom moves right
+                            // When scrolling up (-1): top moves right, bottom moves left
+                            gsap.to([topTween, bottomTween], {
+                                timeScale: currentDirection,
+                                duration: 0.6, // Smooth transition duration
+                                ease: "power2.out",
+                                overwrite: "auto"
+                            });
+                        }
+                    }
+                });
+            });
+        </script>
+
+    </section>
+    <section
+        class="bg-background text-textPrimary font-sans min-h-screen pt-16 pb-8 overflow-x-hidden flex flex-col items-center justify-center selection:bg-textPrimary selection:text-background"
+        data-section='5reelshomebttncarr.html' data-navbar-theme="dark">
+
+
+        
+        <header class="text-center z-30 mb-8 md:mb-16 gs-reveal relative px-4">
+            <h1
+                class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-black uppercase tracking-tighter leading-[1.1]">
+                <span class="lowercase">let's take a look</span><br>
+                <span class="lowercase">at some stuff!</span>
+            </h1>
+            <div class="flex justify-center mt-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </div>
+            
+            <p class="md:hidden text-gray-400 text-xs mt-4 uppercase tracking-widest font-bold">Swipe cards left or
+                right</p>
+        </header>
+
+        
+        <main class="relative w-full max-w-6xl h-[500px] md:h-[600px] flex justify-center items-center">
+
+            
+            <div
+                class="absolute left-[-20%] bottom-[-10%] md:left-[5%] md:bottom-[-5%] z-0 gs-blob pointer-events-none">
+                <svg width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M40,90 C20,100 10,140 40,160 C70,180 90,190 120,170 C150,150 170,140 180,110 C190,80 180,40 140,20 C100,0 60,80 40,90 Z"
+                        fill="#ff3333" />
+                    <path
+                        d="M70,50 C40,60 30,100 60,120 C90,140 130,140 150,110 C170,80 160,30 110,20 C80,10 100,40 70,50 Z"
+                        fill="#ff3333" opacity="0.8" />
+
+
+                </svg>
+            </div>
+
+            
+            <div class="showcase-card gs-card card-1" id="card-1">
+                <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline
+                    preload="none" poster="#">
+                    <source
+                        src="./assets/reels/Day 1 of the Millennium Excellence WeekUSA opened with a golf invitational where His Majesty Otu.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="card-overlay"></div>
+
+            </div>
+
+            
+            <div class="showcase-card gs-card card-2" id="card-2">
+                <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline
+                    preload="none" poster="#">
+                    <source
+                        src="./assets/reels/Thousands of miles away from home, the sound of the Fontomfrom drum carries the exact same weigh.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="card-overlay"></div>
+
+            </div>
+
+            
+            <div class="showcase-card gs-card card-3" id="card-3">
+                <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline
+                    preload="none" poster="#">
+                    <source
+                        src="./assets/reels/When we gather in a room, it is easy to discuss grand visions for our nation. But real transform.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="card-overlay"></div>
+
+            </div>
+        </main>
+
+        
+        <div class="mt-8 md:mt-10 z-30 gs-btn pb-8 px-4">
+            <a href="./Reels.html"
+                class="bg-white text-black text-[9px] font-bold uppercase tracking-[0.2em] pl-4 flex items-center sharp-border hover:bg-gray-200 transition-colors whitespace-nowrap h-[38px] group w-fit mx-auto">
+                <span data-button-animate-chars class="mr-4 overflow-hidden relative inline-block">MORE REELS
+                </span>
+                <div
+                    class="bg-[#ff3333] h-full px-3 flex items-center justify-center border-l border-[#111] group-hover:bg-[#e62e2e] transition-colors">
+                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="square" stroke-linejoin="miter" d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <script>
+            gsap.registerPlugin(Draggable);
+
+            document.addEventListener("DOMContentLoaded", () => {
+                // Initial Settings
+                gsap.set(".gs-reveal, .gs-btn", { autoAlpha: 1 });
+                gsap.set(".gs-card", { autoAlpha: 0, xPercent: -50, yPercent: -50, scale: 0.8, rotation: 0 });
+
+                // Base Animation Timeline
+                const tl = gsap.timeline({ delay: 0.2 });
+                tl.fromTo(".gs-reveal", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" })
+                    .fromTo(".gs-blob", { scale: 0, opacity: 0, rotation: -45 }, { scale: 1, opacity: 1, autoAlpha: 1, rotation: 0, duration: 1.5, ease: "elastic.out(1, 0.5)" }, "-=0.5")
+                    .fromTo(".gs-btn", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=1.0");
+
+                let mm = gsap.matchMedia();
+
+                // ============================================
+                // DESKTOP & TABLET: Static Fanned Layout
+                // ============================================
+                mm.add("(min-width: 768px)", () => {
+                    const isDesktop = window.innerWidth >= 1024;
+
+                    tl.to(".gs-card.card-1", { xPercent: isDesktop ? -160 : -130, yPercent: -40, rotation: isDesktop ? -8 : -6, scale: isDesktop ? 1 : 0.9, autoAlpha: 1, zIndex: 10, duration: 1.2, ease: "back.out(1.4)" }, "-=1.0")
+                        .to(".gs-card.card-2", { xPercent: -50, yPercent: -60, rotation: isDesktop ? 2 : 0, scale: isDesktop ? 1 : 0.9, autoAlpha: 1, zIndex: 30, duration: 1.2, ease: "back.out(1.4)" }, "-=1.0")
+                        .to(".gs-card.card-3", { xPercent: isDesktop ? 60 : 30, yPercent: -45, rotation: isDesktop ? 10 : 6, scale: isDesktop ? 1 : 0.9, autoAlpha: 1, zIndex: 20, duration: 1.2, ease: "back.out(1.4)" }, "-=1.0");
+
+                    // Cleanup if returning from mobile
+                    return () => gsap.set(".gs-card", { clearProps: "all" });
+                });
+
+                // ============================================
+                // MOBILE: Manual Carousel Logic
+                // ============================================
+                mm.add("(max-width: 767px)", () => {
+
+                    // Define initial mobile deck order (Top to Bottom)
+                    let mobileDeck = [
+                        document.getElementById('card-2'), // Front
+                        document.getElementById('card-3'), // Middle
+                        document.getElementById('card-1')  // Back
+                    ];
+
+                    // Layout settings for stack depth (scattered stacked look)
+                    const stackPositions = [
+                        { xPercent: -50, yPercent: -55, rotation: 0, scale: 1, zIndex: 30 },     // Front
+                        { xPercent: -47, yPercent: -51, rotation: 4, scale: 0.95, zIndex: 20 },  // Middle
+                        { xPercent: -53, yPercent: -47, rotation: -3, scale: 0.90, zIndex: 10 }  // Back
+                    ];
+
+                    let draggables = [];
+
+                    // Function to visually position the deck
+                    function renderDeck(animate = true, duration = 0.5) {
+                        mobileDeck.forEach((card, index) => {
+                            const pos = stackPositions[index];
+
+                            // Immediately drop z-index so the swiped card slides *behind* the others during animation
+                            gsap.set(card, { zIndex: pos.zIndex });
+
+                            if (animate) {
+                                gsap.to(card, {
+                                    x: 0, y: 0, // Reset physical drag coordinates smoothly
+                                    xPercent: pos.xPercent, yPercent: pos.yPercent, rotation: pos.rotation, scale: pos.scale,
+                                    autoAlpha: 1, duration: duration, ease: "power2.out", overwrite: "auto"
+                                });
+                            } else {
+                                gsap.set(card, {
+                                    x: 0, y: 0, xPercent: pos.xPercent, yPercent: pos.yPercent, rotation: pos.rotation, scale: pos.scale, autoAlpha: 1
+                                });
+                            }
+                        });
+                        updateDraggableStatus();
+                    }
+
+                    // Enable drag strictly on the front card
+                    function updateDraggableStatus() {
+                        draggables.forEach(d => d.disable());
+                        const frontDraggable = Draggable.get(mobileDeck[0]);
+                        if (frontDraggable) frontDraggable.enable();
+                    }
+
+                    // Initialize Draggable for manual carousel
+                    draggables = Draggable.create(".gs-card", {
+                        type: "x", // Restrict to horizontal dragging for carousel feel
+                        bounds: window,
+                        edgeResistance: 0.8,
+                        onDrag: function () {
+                            // Subtle tilt while dragging for physical feel
+                            gsap.to(this.target, { rotation: this.x * 0.05, duration: 0.1, overwrite: "auto" });
+                        },
+                        onDragEnd: function () {
+                            const swipeThreshold = 60; // Pixels required to trigger next card
+
+                            if (Math.abs(this.x) > swipeThreshold) {
+                                // Valid Swipe: cycle array
+                                let swipedCard = mobileDeck.shift(); // Remove top
+                                mobileDeck.push(swipedCard);         // Push to back
+
+                                // Render the new deck order (card glides to the back position automatically)
+                                renderDeck(true, 0.5);
+                            } else {
+                                // Invalid Swipe: Snap back to center
+                                renderDeck(true, 0.4);
+                            }
+                        }
+                    });
+
+                    // Initial layout run after main GSAP intro finishes
+                    setTimeout(() => renderDeck(true, 1.2), 600);
+
+                    // Cleanup if screen is resized to Desktop
+                    return () => {
+                        draggables.forEach(d => d.kill());
+                        gsap.set(".gs-card", { clearProps: "all" });
+                    };
+                });
+            });
+        </script>
+
+    </section>
+    <section class="text-[#1c1c1a] bg-white" data-section='6servicesnew.html' data-navbar-theme="light">
+
+
+        
+        <main id="stack-section"
+            class="w-full flex flex-col justify-start md:justify-center pt-24 pb-6 md:pt-32 md:pb-8 lg:pt-40 lg:pb-12">
+
+            
+            <header
+                class="max-w-7xl mx-auto w-full px-6 sm:px-8 flex flex-col md:flex-row justify-between items-start md:items-center mb-16 md:mb-12 gap-4 md:gap-6 flex-shrink-0">
+                <h1 class="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] font-black tracking-tight">
+                    Our services
+                </h1>
+                <p class="max-w-md text-gray-800 text-sm sm:text-base font-medium leading-snug">
+                    Thanks to our diverse expertise, we are highly versatile. We enjoy combining our services, but they
+                    can
+                    also be purchased separately.
+                </p>
+            </header>
+
+            
+            <div id="cards-container"
+                class="scroll-container relative flex md:flex-row md:overflow-x-auto gap-0 md:gap-6 pt-0 pb-12 md:pt-10 md:pb-16 px-4 md:px-8 items-center justify-center md:justify-start w-full max-w-[340px] sm:max-w-[400px] md:max-w-none mx-auto h-[370px] sm:h-[410px] md:h-auto flex-shrink-0">
+
+                
+                <div
+                    class="service-card card-1 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#1c1c1a] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy"
+                                    src="./assets/images/potraits/webp/imgi_12_29724a45-6b4e-49d0-923f-292acadecf26_rw_3840.webp"
+                                    alt="Photography" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Photography
+                                </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#1c1c1a]">
+                            <span class="text-[#ff3333] text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Photography</h2>
+                            <p class="text-zinc-400 text-sm leading-relaxed">From intimate portraits to grand events, we
+                                capture every moment with precision and artistry — delivering timeless images that tell
+                                your story.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-zinc-600 pb-1 hover:border-[#ff3333] hover:text-[#ff3333] transition-colors">Book
+                                a shoot <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="service-card card-2 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#ff3333] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+                                    alt="Videography" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Videography
+                                </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#cc2200]">
+                            <span class="text-white/60 text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Videography</h2>
+                            <p class="text-white/80 text-sm leading-relaxed">Cinematic films, highlight reels, and
+                                documentary-style productions — we bring your vision to life with compelling
+                                storytelling and stunning visuals.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-white/40 pb-1 hover:border-white transition-colors">Start
+                                a project <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="service-card card-3 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#1c1c1a] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy"
+                                    src="./assets/images/CorperateEvents/webp/imgi_189_8e1bfd16-84a0-468c-9196-61f8da3898a0_rw_3840.webp"
+                                    alt="Corporate" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Corporate
+                                </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#1c1c1a]">
+                            <span class="text-[#ff3333] text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Corporate</h2>
+                            <p class="text-zinc-400 text-sm leading-relaxed">Professional photography and video for
+                                conferences, product launches, headshots, and brand campaigns — content that elevates
+                                your corporate image.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-zinc-600 pb-1 hover:border-[#ff3333] hover:text-[#ff3333] transition-colors">Get
+                                a quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="service-card card-4 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#ff3333] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy" src="./assets/images/Funeral/fune2.jpg" alt="Funerals"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Funerals</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#cc2200]">
+                            <span class="text-white/60 text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Funerals</h2>
+                            <p class="text-white/80 text-sm leading-relaxed">We handle funeral coverage with the utmost
+                                respect and sensitivity — preserving cherished memories of loved ones with care and
+                                dignity.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-white/40 pb-1 hover:border-white transition-colors">Talk
+                                to us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="service-card card-5 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#1c1c1a] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy"
+                                    src="./assets/images/foods/webp/imgi_13_9f6f9049-dcc9-48d4-8ba8-a537a8d68338.webp"
+                                    alt="Food &amp; Restaurants" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Food &amp;
+                                    Restaurants</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#1c1c1a]">
+                            <span class="text-[#ff3333] text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Food &amp;
+                                Restaurants</h2>
+                            <p class="text-zinc-400 text-sm leading-relaxed">Mouth-watering food photography and
+                                restaurant ambiance shoots that drive appetite and attract customers to your brand.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-zinc-600 pb-1 hover:border-[#ff3333] hover:text-[#ff3333] transition-colors">Book
+                                a session <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="service-card card-6 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#ff3333] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80"
+                                    alt="Events &amp; Weddings" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Events &amp;
+                                    Weddings</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#cc2200]">
+                            <span class="text-white/60 text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Events &amp;
+                                Weddings</h2>
+                            <p class="text-white/80 text-sm leading-relaxed">From intimate ceremonies to grand
+                                celebrations — we capture the joy, the tears, and every unforgettable detail of your
+                                special day.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-white/40 pb-1 hover:border-white transition-colors">Plan
+                                with us <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div
+                    class="service-card card-7 absolute md:relative top-0 w-full md:w-[350px] shadow-xl h-[360px] sm:h-[400px] flex-shrink-0">
+                    <div class="card-inner">
+                        
+                        <div class="card-front bg-[#1c1c1a] p-2.5 flex flex-col justify-between h-[360px] sm:h-[400px]">
+                            <div class="relative w-full h-[280px] sm:h-[310px] rounded-[0.25rem] overflow-hidden">
+                                <img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80"
+                                    alt="Live Streaming" class="w-full h-full object-cover">
+                            </div>
+                            <div class="px-2 pt-2.5 pb-1.5">
+                                <h2 class="text-white font-extrabold text-2xl tracking-tight leading-none">Live
+                                    Streaming</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back bg-[#1c1c1a]">
+                            <span class="text-[#ff3333] text-[9px] font-bold uppercase tracking-[0.2em]">Our
+                                Service</span>
+                            <h2 class="text-white font-extrabold text-3xl tracking-tight leading-tight">Live Streaming
+                            </h2>
+                            <p class="text-zinc-400 text-sm leading-relaxed">Professional multi-camera live streaming
+                                for conferences, church services, concerts, and events — reaching your audience wherever
+                                they are.</p>
+                            <a href="./contact.html"
+                                class="mt-2 inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.15em] border-b border-zinc-600 pb-1 hover:border-[#ff3333] hover:text-[#ff3333] transition-colors">Get
+                                in touch <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const cards = gsap.utils.toArray(".service-card");
+                let mm = gsap.matchMedia();
+
+                // ==========================================
+                // MOBILE VIEW (< 768px): Sticky Header + Card Stacking
+                // ==========================================
+                mm.add("(max-width: 767px)", () => {
+                    const angles = [-2, 2, -1.5, 2.5, -2, 1.5, -1];
+                    const header = document.querySelector("#stack-section header");
+
+                    // Set initial stacking states
+                    cards.forEach((card, index) => {
+                        gsap.set(card, {
+                            y: index === 0 ? 0 : "100vh", // First card visible, rest below screen
+                            rotation: index === 0 ? angles[0] : 0,
+                            zIndex: index + 1,           // Ascending z-index so incoming cards overlay on top
+                            scale: 1
+                        });
+                    });
+
+                    // Reset header opacity in case of re-init
+                    gsap.set(header, { opacity: 1, y: 0 });
+
+                    // Pin the entire section (Header + Cards Container) together
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: "#stack-section",
+                            start: "top top",
+                            end: `+=${cards.length * 90}%`,
+                            pin: true,
+                            scrub: 0.8,
+                            anticipatePin: 1,
+                            invalidateOnRefresh: true
+                        }
+                    });
+
+                    // Sequentially stack each card over the previous ones
+                    cards.forEach((card, i) => {
+                        if (i === 0) return;
+
+                        // Incoming card slides up in front of previous cards
+                        tl.to(card, {
+                            y: "0%",
+                            rotation: angles[i % angles.length],
+                            duration: 1,
+                            ease: "power2.out"
+                        }, `card-${i}`);
+
+                        // Cards underneath shrink slightly to add depth
+                        for (let j = 0; j < i; j++) {
+                            tl.to(cards[j], {
+                                scale: 1 - ((i - j) * 0.035),
+                                y: -((i - j) * 6),
+                                duration: 1,
+                                ease: "power2.out"
+                            }, `card-${i}`);
+                        }
+                    });
+
+                    // Fade out the header once the last card finishes stacking
+                    tl.to(header, {
+                        opacity: 0,
+                        y: -20,
+                        duration: 0.5,
+                        ease: "power2.in"
+                    }, ">");
+
+                    return () => {
+                        gsap.set(cards, { clearProps: "all" });
+                        gsap.set(header, { clearProps: "all" });
+                    };
+                });
+
+                // ==========================================
+                // DESKTOP & TABLET VIEW (>= 768px): Drag-to-Scroll + Flip
+                // ==========================================
+                mm.add("(min-width: 768px)", () => {
+                    // Reset inline GSAP styles for clean CSS hover & horizontal scroll
+                    gsap.set(cards, { clearProps: "all" });
+
+                    // --- Drag-to-Scroll on Desktop ---
+                    const container = document.getElementById('cards-container');
+                    let isDragging = false;
+                    let startX = 0;
+                    let scrollLeft = 0;
+                    let dragMoved = false;
+
+                    container.addEventListener('mousedown', (e) => {
+                        isDragging = true;
+                        dragMoved = false;
+                        startX = e.pageX - container.offsetLeft;
+                        scrollLeft = container.scrollLeft;
+                        container.classList.add('is-dragging');
+                    });
+
+                    window.addEventListener('mousemove', (e) => {
+                        if (!isDragging) return;
+                        const x = e.pageX - container.offsetLeft;
+                        const walk = (x - startX) * 1.5;
+                        if (Math.abs(walk) > 3) dragMoved = true;
+                        container.scrollLeft = scrollLeft - walk;
+                    });
+
+                    window.addEventListener('mouseup', () => {
+                        isDragging = false;
+                        container.classList.remove('is-dragging');
+                    });
+
+                    // Prevent card clicks from firing after a drag
+                    container.addEventListener('click', (e) => {
+                        if (dragMoved) e.stopPropagation();
+                    }, true);
+
+                    return () => {
+                        // Cleanup handled by browser on media query change
+                    };
+                });
+
+                // Mobile: tap to flip cards
+                mm.add("(max-width: 767px)", () => {
+                    // Already set up via CSS .flipped class
+                });
+
+                // Mobile tap-to-flip handler (outside matchMedia since it's touch)
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        // Only flip on mobile
+                        if (window.innerWidth < 768) {
+                            card.classList.toggle('flipped');
+                        }
+                    });
+                });
+            });
+        </script>
+
+    </section>
+    <section class="flex items-center py-12 md:py-16 px-6 sm:px-12 md:px-24 bg-white text-[#1c1c1a]"
+        data-section='9testimonials.html' data-navbar-theme="light">
+
+        <main class="w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-12 md:gap-24 relative">
+
+            
+            <aside class="md:w-1/4 flex-shrink-0 pt-2 flex md:flex-col gap-4">
+                <div class="flex gap-2">
+                    <button id="prevBtn"
+                        class="nav-btn flex items-center justify-center w-11 h-11 rounded-lg border border-zinc-300 hover:bg-zinc-100 text-[#1c1c1a]"
+                        aria-label="Previous testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5"></path>
+                            <path d="M12 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button id="nextBtn"
+                        class="nav-btn flex items-center justify-center w-11 h-11 rounded-lg border border-zinc-300 hover:bg-zinc-100 text-[#1c1c1a]"
+                        aria-label="Next testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </aside>
+
+            
+            <section class="w-full md:w-3/4 relative flex flex-col">
+                
+                <header class="mb-12 flex items-center gap-2 text-sm font-medium tracking-wide">
+                    <span id="counter" class="font-semibold text-[#1c1c1a]">1 / 5</span>
+                    <span class="text-zinc-500">What our clients say:</span>
+                </header>
+
+                
+                <div id="testimonial-container" class="relative min-h-[400px] w-full">
+                    
+                </div>
+            </section>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Testimonial Data
+                const testimonials = [
+                    {
+                        quote: "After a rough quarter, we needed hands fast. Their team jumped in with clear pricing and flexible coverage for weekend rushes and supplier delays. They've become our first call when operations get tight.",
+                        name: "Mara Kline",
+                        company: "Northbay Produce Co.",
+                        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                    },
+                    {
+                        quote: "We were referred by a partner and liked the straight answers. They helped us stabilize scheduling, fill last-minute gaps, and keep deliveries on time during peak season. Now we reach out before problems snowball.",
+                        name: "Devon Reyes",
+                        company: "Kestrel Courier Group",
+                        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
+                    },
+                    {
+                        quote: "During our expansion, training and onboarding fell behind. They stepped in with consistent staffing, fair rates, and quick turnaround for urgent shifts.",
+                        name: "Priya Menon",
+                        company: "Harborview Senior Living",
+                        image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=150&q=80"
+                    },
+                    {
+                        quote: "The seamless integration into our daily operations was exactly what we needed. Their team provided incredible oversight and allowed us to focus entirely on scaling our core product without operational friction.",
+                        name: "Alex Johnson",
+                        company: "TechFlow Inc.",
+                        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+                    },
+                    {
+                        quote: "A game changer for our Q4 logistics. We couldn't have hit our targets without their reliable on-demand support and clear communication throughout the busiest weeks of the year.",
+                        name: "Sarah Lee",
+                        company: "Meridian Logistics",
+                        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80"
+                    }
+                ];
+
+                // State
+                let currentIndex = 0;
+                let isAnimating = false;
+
+                // DOM Elements
+                const container = document.getElementById("testimonial-container");
+                const prevBtn = document.getElementById("prevBtn");
+                const nextBtn = document.getElementById("nextBtn");
+                const counter = document.getElementById("counter");
+
+                // Animation Settings
+                const DURATION = 0.65;
+                const EASE = "power3.inOut";
+                const Y_OFFSET = 45;
+
+                function renderSlide(index, direction = "next", initialRender = false) {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    const data = testimonials[index];
+                    const oldSlide = container.querySelector(".testimonial-slide:not(.leaving)");
+
+                    const newSlide = document.createElement("div");
+                    newSlide.className = "testimonial-slide absolute top-0 left-0 w-full";
+
+                    newSlide.innerHTML = `
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.15] mb-12 max-w-[45ch] text-[#1c1c1a]">
+                        \u201c${data.quote}\u201d
+                    </h2>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img loading="lazy" src="${data.image}" alt="${data.name}" class="w-14 h-14 rounded-full object-cover shadow-sm">
+                        <div class="flex flex-col">
+                            <span class="font-bold text-lg lg:text-xl leading-tight text-[#1c1c1a]">${data.name}</span>
+                            <span class="text-sm lg:text-base uppercase text-zinc-500 mt-0.5">${data.company}</span>
+                        </div>
+                    </div>
+                `;
+
+                    container.appendChild(newSlide);
+
+                    counter.innerText = `${index + 1} / ${testimonials.length}`;
+                    prevBtn.disabled = index === 0;
+                    nextBtn.disabled = index === testimonials.length - 1;
+
+                    if (initialRender) {
+                        gsap.fromTo(newSlide,
+                            { opacity: 0, y: 20 },
+                            { opacity: 1, y: 0, duration: DURATION, ease: "power2.out", onComplete: () => isAnimating = false }
+                        );
+                        return;
+                    }
+
+                    const outY = direction === "next" ? -Y_OFFSET : Y_OFFSET;
+                    const inY = direction === "next" ? Y_OFFSET : -Y_OFFSET;
+
+                    gsap.set(newSlide, { opacity: 0, y: inY });
+
+                    const tl = gsap.timeline({
+                        onComplete: () => {
+                            if (oldSlide) oldSlide.remove();
+                            isAnimating = false;
+                        }
+                    });
+
+                    if (oldSlide) {
+                        oldSlide.classList.add("leaving");
+                        tl.to(oldSlide, { opacity: 0, y: outY, duration: DURATION, ease: EASE }, 0);
+                    }
+
+                    tl.to(newSlide, { opacity: 1, y: 0, duration: DURATION, ease: EASE }, 0.1);
+                }
+
+                prevBtn.addEventListener("click", () => {
+                    if (currentIndex > 0 && !isAnimating) {
+                        currentIndex--;
+                        renderSlide(currentIndex, "prev");
+                    }
+                });
+
+                nextBtn.addEventListener("click", () => {
+                    if (currentIndex < testimonials.length - 1 && !isAnimating) {
+                        currentIndex++;
+                        renderSlide(currentIndex, "next");
+                    }
+                });
+
+                // Init
+                renderSlide(currentIndex, "next", true);
+            });
+        </script>
+
+    </section>
+    <script>
+        let lastScroll = 0;
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                nav.classList.add('-translate-y-full');
+            } else {
+                nav.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+    <section class="text-white flex items-center justify-center relative overflow-hidden py-24 md:py-32 min-h-[60vh]"
+        data-section='8letsworktogether.html' data-navbar-theme="light"
+        style="background-image: url('./bts.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+        
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+        
+        <main
+            class="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-12 md:py-16 relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16 lg:gap-8">
+
+            
+            <div class="w-full lg:w-[65%]">
+                <h1
+                    class="font-display uppercase leading-[0.85] tracking-wide text-[4.5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[9.5rem] xl:text-[11rem] m-0 text-white">
+                    <div class="clip-text">
+                        <span class="block transform translate-y-full text-reveal">Let's Roll</span>
+                    </div>
+                </h1>
+            </div>
+
+            
+            <div
+                class="w-full lg:w-[35%] flex flex-col justify-center pt-2 lg:pt-6 xl:pt-10 pr-0 xl:pr-12 content-reveal opacity-0">
+
+                <h2 class="font-display text-3xl md:text-4xl lg:text-[2.5rem] text-white mb-14 tracking-tight">
+                    Get in touch
+                </h2>
+
+                <p class="font-sans text-white/80 text-[15px] leading-relaxed mb-12 max-w-md">
+                    Are you a brand or company in need of contagiously creative stopping power? Or are you an agency in
+                    need of a kick-ass creative production partner? Just hit us up!
+                </p>
+
+                
+                <a href="mailto:[abeikuedqlics@gmail.com]"
+                    class="bg-white text-black text-[9px] font-bold uppercase tracking-[0.2em] pl-4 flex items-center sharp-border hover:bg-gray-200 transition-colors whitespace-nowrap h-[38px] group w-fit">
+                    <span data-button-animate-chars class="mr-4 overflow-hidden relative inline-block">EMAIL US</span>
+                    <div
+                        class="bg-[#ff3333] h-full px-3 flex items-center justify-center border-l border-[#111] group-hover:bg-[#e62e2e] transition-colors">
+                        <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="square" stroke-linejoin="miter" d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tl = gsap.timeline({
+                    defaults: { ease: "power4.out" }, scrollTrigger: {
+                        trigger: "[data-section='8letsworktogether.html']",
+                        start: "top 80%"
+                    }
+                });
+
+                // 1. Reveal massive typography (bottom to top mask reveal)
+                tl.to(".text-reveal", {
+                    y: "0%",
+                    duration: 1.2,
+                    stagger: 0.15,
+                    delay: 0.2
+                });
+
+                // 2. Fade in right column content
+                tl.to(".content-reveal", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1
+                }, "-=0.8");
+            });
+        </script>
+    </section>
+
+    <section class="antialiased overflow-x-hidden flex flex-col relative pt-20" data-section='8footer1.html'
+        data-navbar-theme="dark"
+        style="background-image: url('./bts.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        
+        <div class="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+
+
+        
+        
+<footer id="editorial-footer"
+            class="w-full bg-black z-10 relative text-white rounded-t-2xl pt-12 pb-8 md:pt-16 md:pb-12">
+            <div class="flex flex-col lg:flex-row w-full gap-0">
+
+                
+                
+                <div
+                    class="footer-col w-full lg:w-[35%]  bg-black text-white p-8 md:p-10 lg:p-12 flex flex-col justify-between order-2 lg:order-3 ">
+
+                    <div class="newsletter-element">
+                        <h3
+                            class="text-xl md:text-2xl font-medium leading-snug tracking-tight mb-6 md:mb-8 text-center lg:text-left text-white">
+                            Let’s create photographs and films that give your story room to move.
+                        </h3>
+
+                        <form
+                            class="flex w-full h-[48px] border border-zinc-700 rounded-lg overflow-hidden focus-within:ring-2 ring-[#ff3333] transition-all bg-zinc-900 mb-10 lg:mb-16">
+                            <input type="email" placeholder="Email Address"
+                                class="flex-1 min-w-0 h-full px-3 md:px-4 text-sm font-bold bg-transparent outline-none text-white placeholder:text-zinc-500 border-r border-zinc-800"
+                                required>
+                            <button type="submit"
+                                class="h-full min-w-[80px] px-4 md:px-6 bg-white text-black text-[9px] font-bold uppercase tracking-[0.2em] flex items-center justify-center hover:bg-gray-100 transition-colors whitespace-nowrap shrink-0">
+                                <span>SUBMIT</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="meta-element flex flex-col items-center text-center mt-auto">
+
+                        <div class="flex gap-2 md:gap-3 mb-8 lg:mb-10 lg:self-center">
+                            
+                            <a href="https://web.facebook.com/Edqlics?_rdc=1&_rdr#" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/abeiku_edqlics/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="https://www.tiktok.com/@abeikuedqlics" target="_blank" rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.78-1.15 5.54-3.33 7.65-2.27 2.19-5.46 3.44-8.68 3.39-3.31-.05-6.49-1.47-8.7-3.88C-.3 21.68-.84 18.25.76 15.11c1.37-2.68 4.11-4.52 7.15-4.72 0 1.34.01 2.68-.01 4.02-1.57.17-3.13.98-4.07 2.27-.99 1.34-1.25 3.19-.66 4.75.56 1.48 1.95 2.6 3.52 2.89 1.63.3 3.37-.09 4.67-1.16 1.3-1.07 2.06-2.69 2.16-4.38.16-4.66.1-9.33.12-14.01 1.05.02 2.1-.03 3.15-.04l.01-.01-.27-.7z" />
+                                </svg>
+                            </a>
+                            
+                            <a href="http://www.youtube.com/@Edqlics" target="_blank" rel="noopener noreferrer"
+                                class="w-8 h-8 md:w-9 md:h-9 rounded-full border border-zinc-700 flex items-center justify-center hover:bg-[#ff3333] hover:text-white transition-colors">
+                                <svg class="w-3.5 h-3.5 md:w-4 md:h-4 fill-current text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21.582 6.186a2.684 2.684 0 0 0-1.884-1.9C18.04 3.833 12 3.833 12 3.833s-6.04 0-7.698.453a2.684 2.684 0 0 0-1.884 1.9C1.96 7.859 1.96 12 1.96 12s0 4.141.458 5.814a2.684 2.684 0 0 0 1.884 1.9c1.658.453 7.698.453 7.698.453s6.04 0 7.698-.453a2.684 2.684 0 0 0 1.884-1.9C22.04 16.141 22.04 12 22.04 12s0-4.141-.458-5.814zM9.96 15.429V8.571L15.96 12l-6 3.429z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="text-[10px] md:text-[11px] text-center text-zinc-300 space-y-3 md:space-y-4">
+                            <p class="font-medium tracking-wide text-white">&copy; 2026 Abeiku Edqlics</p>
+                            <a href="#"
+                                class="inline-block underline underline-offset-4 hover:text-[#ff3333] transition-colors mt-2 text-white">
+                                Site Credit
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                
+                <div
+                    class="footer-col w-full lg:w-[30%]  bg-black text-white p-8 md:p-10 lg:p-12 flex flex-col items-center justify-between text-center order-1 lg:order-1 ">
+
+                    <div class="brand-element flex flex-col items-center mt-4">
+                        <div class="mb-3">
+                            <img loading="lazy" src="./assets/logo/logo.png" alt="Abeiku Edqlics Logo"
+                                class="h-24 md:h-32 w-auto object-contain">
+                        </div>
+                        <span class="font-bold text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-zinc-400">Est.
+                            2026</span>
+                    </div>
+
+                    <h3
+                        class="brand-element font-display text-lg md:text-xl lg:text-2xl leading-snug my-10 lg:my-12 max-w-[250px] text-white">
+                        Here to help you tell your story.
+                    </h3>
+
+                </div>
+
+                
+                
+                <div
+                    class="footer-col w-full lg:w-[35%] bg-black text-white p-8 md:p-10 lg:p-12 order-3 lg:order-2  flex flex-col justify-center ">
+                    <div class="grid grid-cols-2 gap-y-10 gap-x-6 h-full">
+
+                        <div class="nav-group">
+                            <h3 class="font-display text-sm uppercase tracking-wider mb-4 md:mb-5 text-white">Navigation
+                            </h3>
+                            <ul class="space-y-3 text-xs lg:text-sm font-medium text-zinc-300">
+                                <li><a href="./index.html" class="footer-link"><span>Home</span></a></li>
+                                <li><a href="./Projects.html" class="footer-link"><span>Work</span></a></li>
+                                <li><a href="./AboutUs.html" class="footer-link"><span>About</span></a></li>
+                                <li><a href="./contact.html" class="footer-link"><span>Contact</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-group">
+                            <h3 class="font-display text-sm uppercase tracking-wider mb-4 md:mb-5 text-white">Legal</h3>
+                            <ul class="space-y-3 text-xs lg:text-sm font-medium text-zinc-300">
+                                <li><a href="#" class="footer-link"><span>FAQs</span></a></li>
+                                <li><a href="./sitemap.xml" class="footer-link"><span>Sitemap</span></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+
+
+
+
+
+
+        
+        <script>
+            window.addEventListener("load", () => {
+                gsap.registerPlugin(ScrollTrigger);
+
+                const columns = gsap.utils.toArray('.footer-col');
+
+                columns.forEach((col) => {
+                    const navGroups = col.querySelectorAll('.nav-group');
+                    const brandElements = col.querySelectorAll('.brand-element');
+                    const interactElements = col.querySelectorAll('.newsletter-element, .meta-element');
+
+                    if (navGroups.length > 0) {
+                        gsap.from(navGroups, {
+                            scrollTrigger: {
+                                trigger: col,
+                                start: "top 85%",
+                            },
+                            y: 20,
+                            opacity: 0,
+                            duration: 0.6,
+                            stagger: 0.1,
+                            ease: "power2.out"
+                        });
+                    }
+
+                    if (brandElements.length > 0) {
+                        gsap.from(brandElements, {
+                            scrollTrigger: {
+                                trigger: col,
+                                start: "top 85%",
+                            },
+                            scale: 0.95,
+                            y: 30,
+                            opacity: 0,
+                            duration: 0.7,
+                            stagger: 0.15,
+                            ease: "back.out(1.2)"
+                        });
+                    }
+
+                    if (interactElements.length > 0) {
+                        gsap.from(interactElements, {
+                            scrollTrigger: {
+                                trigger: col,
+                                start: "top 85%",
+                            },
+                            x: 20,
+                            opacity: 0,
+                            duration: 0.7,
+                            stagger: 0.2,
+                            ease: "power2.out"
+                        });
+                    }
+                });
+
+                ScrollTrigger.refresh();
+            });
+        </script>
+
+    </section>
+    
+    <script>
+        function initButtonCharacterStagger() {
+            const offsetIncrement = 0.01;
+            const buttons = document.querySelectorAll('[data-button-animate-chars]');
+
+            buttons.forEach(button => {
+                const text = button.textContent.trim();
+                button.innerHTML = '';
+
+                [...text].forEach((char, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    span.style.transitionDelay = `${index * offsetIncrement}s`;
+                    if (char === ' ') {
+                        span.style.whiteSpace = 'pre';
+                    }
+                    button.appendChild(span);
+                });
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            initButtonCharacterStagger();
+        });
+    </script>
+    
+    <script>
+        (function () {
+            const logo = document.getElementById('nav-logo');
+            const NAV_HEIGHT = 80; // px — approximate navbar height
+
+            // All themed sections
+            const sections = document.querySelectorAll('[data-navbar-theme]');
+
+            function updateLogoTheme() {
+                // Find the section currently under the navbar
+                let currentTheme = 'dark'; // default (first section is dark hero)
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    // Section is under the navbar if its top is above nav bottom and its bottom is below nav top
+                    if (rect.top <= NAV_HEIGHT && rect.bottom > 0) {
+                        currentTheme = section.dataset.navbarTheme;
+                    }
+                });
+
+                if (currentTheme === 'dark') {
+                    logo.classList.remove('invert');
+                } else {
+                    logo.classList.add('invert');
+                }
+            }
+
+            // Throttle scroll for performance
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateLogoTheme();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Run on load
+            updateLogoTheme();
+        })();
+    </script>
+
+    
+    <script>
+        const lenis = new Lenis();
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+    </script>
+    
+    <div class="zoom-overlay" id="overlay"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const zoomables = document.querySelectorAll('.zoomable');
+            const overlay = document.getElementById('overlay');
+
+            let activeClone = null;
+            let activeOriginal = null;
+            let isAnimating = false;
+
+            zoomables.forEach(img => {
+                img.addEventListener('click', () => {
+                    if (isAnimating || activeClone) return;
+                    openZoom(img);
+                });
+            });
+
+            function openZoom(originalImg) {
+                isAnimating = true;
+                activeOriginal = originalImg;
+
+                // Get original dimensions & position
+                const rect = originalImg.getBoundingClientRect();
+
+                // Create clone
+                activeClone = originalImg.cloneNode(true);
+                activeClone.classList.remove('zoomable', 'img-parallax');
+                activeClone.classList.add('zoom-clone');
+
+                // Set initial inline styles to match exact original position
+                gsap.set(activeClone, {
+                    position: 'fixed',
+                    top: rect.top,
+                    left: rect.left,
+                    width: rect.width,
+                    height: rect.height,
+                    margin: 0,
+                    zIndex: 101,
+                    borderRadius: '12px'
+                });
+
+                document.body.appendChild(activeClone);
+
+                // Hide original visually but keep its space in DOM
+                originalImg.style.opacity = '0';
+
+                // Show overlay & lock scroll
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // Calculate target bounds (90% of screen while maintaining aspect ratio)
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                const padding = 60;
+
+                const maxW = vw - padding * 2;
+                const maxH = vh - padding * 2;
+                const aspectRatio = rect.width / rect.height;
+
+                let targetWidth = rect.width;
+                let targetHeight = rect.height;
+
+                if (maxW / maxH > aspectRatio) {
+                    targetHeight = maxH;
+                    targetWidth = targetHeight * aspectRatio;
+                } else {
+                    targetWidth = maxW;
+                    targetHeight = targetWidth / aspectRatio;
+                }
+
+                const targetTop = (vh - targetHeight) / 2;
+                const targetLeft = (vw - targetWidth) / 2;
+
+                // GSAP Animation to center screen
+                gsap.to(activeClone, {
+                    top: targetTop,
+                    left: targetLeft,
+                    width: targetWidth,
+                    height: targetHeight,
+                    borderRadius: '6px', // Less rounded when zoomed
+                    duration: 0.5,
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        isAnimating = false;
+                    }
+                });
+
+                // Add close listeners
+                activeClone.addEventListener('click', closeZoom);
+                overlay.addEventListener('click', closeZoom);
+                window.addEventListener('scroll', closeZoom, { once: true });
+            }
+
+            function closeZoom() {
+                if (isAnimating || !activeClone || !activeOriginal) return;
+                isAnimating = true;
+
+                const rect = activeOriginal.getBoundingClientRect();
+
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                window.removeEventListener('scroll', closeZoom);
+
+                // Animate clone back to original position
+                gsap.to(activeClone, {
+                    top: rect.top,
+                    left: rect.left,
+                    width: rect.width,
+                    height: rect.height,
+                    borderRadius: '12px',
+                    duration: 0.5,
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                        activeOriginal.style.opacity = '1';
+                        activeClone.remove();
+                        activeClone = null;
+                        activeOriginal = null;
+                        isAnimating = false;
+                    }
+                });
+            }
+        });
+    </script>
+
+    
+    <div id="transition-overlay"
+        class="fixed inset-0 bg-[#1a1a1a] z-[9999] flex items-center justify-center pointer-events-none shadow-2xl"
+        style="transform: translateY(-100%);">
+        <div class="overflow-hidden">
+            <span id="transition-text" style="font-family: 'JetBrains Mono', monospace;"
+                class="text-[#ff3333] text-lg tracking-[0.2em] inline-block opacity-100 transform translate-y-0">
+                [ LOADING ]
+            </span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const overlay = document.getElementById('transition-overlay');
+            const overlayText = document.getElementById('transition-text');
+
+            // Set initial page name based on current URL
+            let currentName = "LOADING";
+            const path = window.location.pathname.toLowerCase();
+            if (path.includes("index") || path.endsWith("/") || path === "") currentName = "HOME";
+            else if (path.includes("projects")) currentName = "WORK";
+            else if (path.includes("contact")) currentName = "CONTACT";
+            else if (path.includes("reels")) currentName = "REELS";
+            else if (path.includes("about")) currentName = "ABOUT US";
+            overlayText.innerText = `[ ${currentName} ]`;
+
+            // Animate IN (Reveal page) - only if navigating from another page
+            if (sessionStorage.getItem('isTransitioning')) {
+                sessionStorage.removeItem('isTransitioning');
+                gsap.set(overlay, { y: '0%' });
+                const tl = gsap.timeline();
+                tl.to(overlayText, { y: -20, opacity: 0, duration: 0.3, ease: "power3.in", delay: 0.2 })
+                    .to(overlay, { y: '-100%', duration: 0.8, ease: "power4.inOut" }, "-=0.1");
+            }
+
+            // Handle link clicks for Animate OUT
+            document.querySelectorAll('a[href]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    const target = this.getAttribute('target');
+
+                    // Ignore empty, hash, tel, mailto, and target="_blank" links
+                    if (!href || href === '#' || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || target === '_blank') {
+                        return;
+                    }
+
+                    // Ignore external links
+                    if (href.startsWith('http') && !href.includes(window.location.hostname)) return;
+
+                    e.preventDefault();
+
+                    let targetName = "LOADING";
+                    const hrefLower = href.toLowerCase();
+                    if (hrefLower.includes("index") || hrefLower === "./" || hrefLower === "/") targetName = "HOME";
+                    else if (hrefLower.includes("projects")) targetName = "WORK";
+                    else if (hrefLower.includes("contact")) targetName = "CONTACT";
+                    else if (hrefLower.includes("reels")) targetName = "REELS";
+                    else if (hrefLower.includes("about")) targetName = "ABOUT US";
+                    overlayText.innerText = `[ ${targetName} ]`;
+                    sessionStorage.setItem('isTransitioning', 'true');
+
+                    // Animate OUT (Cover page)
+                    const outTl = gsap.timeline({
+                        onComplete: () => {
+                            window.location.href = href;
+                        }
+                    });
+
+                    outTl.set(overlay, { y: '100%' })
+                        .to(overlay, { y: '0%', duration: 0.8, ease: "power4.inOut" })
+                        .fromTo(overlayText,
+                            { y: 20, opacity: 0 },
+                            { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" },
+                            "-=0.2"
+                        );
+                });
+            });
+        });
+
+        // Handle browser back button (safari/bfcache)
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) {
+                const overlay = document.getElementById('transition-overlay');
+                const overlayText = document.getElementById('transition-text');
+                const tl = gsap.timeline();
+                tl.to(overlayText, { y: -20, opacity: 0, duration: 0.3, ease: "power3.in" })
+                    .to(overlay, { y: '-100%', duration: 0.8, ease: "power4.inOut" }, "-=0.1");
+            }
+        });
+    </script>
+</body>
+
+</html>
